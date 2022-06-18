@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* base */
+body {
+  @apply bg-background w-screen ;
+}
+
+p {
+  @apply text-text;
+}
+/* button */
+button {
+  @apply border border-primary text-primary py-0 px-6 uppercase
+  hover:bg-primary hover:text-white;
+}
+
+/* classes */
+.search-btn {
+  margin-left: -34px;
+}
+
+.y-line{
+  @apply border mx-10 my-5 border-white h-32 rounded-full opacity-60;
+}
+
+.y-icon{
+  @apply text-white mx-auto text-3xl my-5 opacity-70
+  hover:opacity-100;
+}
+
+.scrolled{
+  @apply bg-white;
+}
