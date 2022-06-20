@@ -6,6 +6,9 @@
 body {
   @apply bg-background w-screen ;
 }
+section{
+  @apply pt-32 w-screen;
+}
 
 p {
   @apply text-text;
@@ -14,6 +17,19 @@ p {
 button {
   @apply border border-primary text-primary py-0 px-6 uppercase
   hover:bg-primary hover:text-white;
+}
+
+/* main classes */
+.title{
+  @apply text-black font-bold text-3xl text-center;
+}
+
+.small-title{
+  @apply text-black font-semibold text-xl;
+}
+
+.input{
+  @apply bg-white rounded;
 }
 
 /* classes */
