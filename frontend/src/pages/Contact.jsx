@@ -26,7 +26,7 @@ const Contact = () => {
       <form className='flex flex-col'>
         <label className='flex flex-col'>
           Fulde navn:
-          <input className='h-12' type="text" name="name" />
+          <input type="text" name="name" />
         </label>
         
         <lable className='flex flex-col'>
@@ -36,7 +36,7 @@ const Contact = () => {
 
         <lable className='flex flex-col'>
           Besked:
-          <input type="text" name="besked" />
+          <input className='12' type="text" name="besked" />
         </lable>
       </form>
     
