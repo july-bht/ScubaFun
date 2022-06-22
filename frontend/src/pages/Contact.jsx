@@ -36,7 +36,7 @@ const Contact = () => {
 
         <lable className='flex flex-col'>
           Besked:
-          <input className='12' type="text" name="besked" />
+          <input className='h-12' type="text" name="besked" />
         </lable>
       </form>
     
