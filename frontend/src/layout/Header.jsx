@@ -4,17 +4,19 @@ import Navigation from './Navigation'
 
 const Header = () => {
     return (
-        <header id='header'>
-            <div className=' z-10 flex justify-between w-screen p-5 fixed'>
+
+        <header className='header h-20'>
+            <div className=' z-10 flex justify-between w-screen p-5 fixed bg-black'>
                 <figure>
                     <Logo />
                 </figure>
                 <div className='flex gap-20'>
                     <Navigation />
-                    <button>Shoppen</button>
+                    <button className='mr-4 transition duration-500'>Shoppen</button>
                 </div>
             </div>
         </header>
+    
     )
 }
 
