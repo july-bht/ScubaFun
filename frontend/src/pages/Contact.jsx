@@ -1,5 +1,6 @@
 import React from 'react'
 import Line from "../components/Line";
+import MAP from '../images/maps-google.png'
 
 const Contact = () => {
   return (
@@ -19,29 +20,29 @@ const Contact = () => {
     {/* LEFT-SIDE */}
       <div className='p-5'>
 
-      <p className='flex justify-end'>+45 42789605</p>
-      <p className='flex justify-end'>contact@scubafun.dk</p>
+      <p className='flex justify-start text-black pb-8'>+45 42789605</p>
+      <p className='flex justify-start text-black pb-8'>contact@scubafun.dk</p>
 
     {/* FORM */}
       <form className='flex flex-col'>
         <label className='flex flex-col'>
           Fulde navn:
-          <input type="text" name="name" />
+          <input className='pl-2' type="text" name="name" />
         </label>
         
         <lable className='flex flex-col'>
           Email:
-          <input type="text" name="email" />
+          <input className='pl-2' type="text" name="email" />
         </lable>
 
         <lable className='flex flex-col'>
           Besked:
-          <input className='h-12' type="text" name="besked" />
+          <input className='h-12 pl-2' type="text" name="besked" />
         </lable>
       </form>
     
       <div className='flex justify-center pt-3'>
-        <button className='mr-4 transition duration-500'>Shoppen</button>
+        <button className='mr-4 h-8 transition duration-500'>Shoppen</button>
       </div>
     {/* FORM END*/}
 
@@ -50,6 +51,8 @@ const Contact = () => {
 
       {/* RIGHT-SIDE */}
       <div className='p-5'>
+
+        <img src={MAP} />
 
         <p>Lager adresse</p>
         <p>Svinget 2, 8570 Trustrup, Lyngby</p>
