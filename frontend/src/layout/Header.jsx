@@ -7,12 +7,14 @@ const Header = () => {
 
         <header className='header h-20'>
             <div className=' z-10 flex justify-between w-screen p-5 fixed bg-black'>
-                <figure>
+                <figure className='flex items-center'>
                     <Logo />
                 </figure>
-                <div className='flex gap-20'>
+                <div className='flex'>
                     <Navigation />
-                    <button className='mr-4 transition duration-500'>Shoppen</button>
+                    <div className='pr-6 px-5 py-4 flex items-center'>
+                    <button className='hidden px-4 py-1 md-lg:block transition duration-500'>Shoppen</button>
+                    </div>
                 </div>
             </div>
         </header>

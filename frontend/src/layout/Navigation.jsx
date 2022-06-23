@@ -17,7 +17,7 @@ const Navigation = () => {
             to: '/places'
         },
         {
-            name: 'Praktisk info',
+            name: 'Info',
             to: '/info'
         },
         {
@@ -26,9 +26,11 @@ const Navigation = () => {
         }
     ]
     return (
-        <nav className='flex gap-10'>
+        <nav className='grid w-auto grid-cols-5 justify-items-center gap-8'>
             {links.map(link => (
-                <NavLink className="my-auto font-medium text-white text-medium hover:text-primary" key={link.name} to={link.to}>{link.name}</NavLink>
+                <NavLink className="my-auto hidden md-lg:block font-medium  text-white text-base hover:text-primary" key={link.name} to={link.to}>
+                    {link.name}
+                </NavLink>
             ))}
         </nav>
     )
