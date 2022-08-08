@@ -26,9 +26,9 @@ const Navigation = () => {
         }
     ]
     return (
-        <nav className='grid w-auto grid-cols-5 justify-items-center gap-8'>
+        <nav className='grid grid-cols-5 justify-items-center gap-8'>
             {links.map(link => (
-                <NavLink className="my-auto hidden md-lg:block font-medium  text-white text-base hover:text-primary" key={link.name} to={link.to}>
+                <NavLink className="my-auto hidden md-lg:block font-medium w-auto text-white text-base hover:text-primary" key={link.name} to={link.to}>
                     {link.name}
                 </NavLink>
             ))}

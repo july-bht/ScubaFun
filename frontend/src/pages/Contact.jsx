@@ -4,7 +4,7 @@ import MAP from '../images/maps-google.png'
 
 const Contact = () => {
   return (
-    <div className='pt-5 flex justify-center bg-slate-200'>
+    <div className='pt-5 flex justify-center bg-slate-100'>
 
     <div className='w-3/5'>
 
@@ -15,7 +15,7 @@ const Contact = () => {
     </div>
     {/* TITLE END */}
 
-    <div className='grid grid-cols-2 gap-8'>
+    <div className='md:grid md:grid-cols-2 md:gap-8'>
       
     {/* LEFT-SIDE */}
       <div className='p-5'>
