@@ -4,7 +4,7 @@ import MAP from '../images/maps-google.png'
 
 const Contact = () => {
   return (
-    <div className='pt-5 flex justify-center bg-slate-100'>
+    <div className='pt-5 flex justify-center'>
 
     <div className='w-3/5'>
 
@@ -15,34 +15,37 @@ const Contact = () => {
     </div>
     {/* TITLE END */}
 
-    <div className='md:grid md:grid-cols-2 md:gap-8'>
+    <div className='md:grid md:grid-cols-2 md:gap-8 '>
       
     {/* LEFT-SIDE */}
       <div className='p-5'>
 
+    <div className='p-2'>
       <p className='flex justify-start text-black pb-8'>+45 42789605</p>
       <p className='flex justify-start text-black pb-8'>contact@scubafun.dk</p>
-
+</div>
     {/* FORM */}
-      <form className='flex flex-col'>
-        <label className='flex flex-col'>
+    <div className='bg-secondary'>
+      <form className='flex flex-col p-2'>
+        <label className='flex text-black flex-col'>
           Fulde navn:
-          <input className='pl-2' type="text" name="name" />
+          <input className='p-1 bg-white' type="text" name="name" />
         </label>
         
-        <lable className='flex flex-col'>
+        <lable className='flex text-black flex-col'>
           Email:
-          <input className='pl-2' type="text" name="email" />
+          <input className='p-1 bg-white' type="text" name="email" />
         </lable>
 
-        <lable className='flex flex-col'>
+        <lable className='flex text-black flex-col'>
           Besked:
-          <input className='h-12 pl-2' type="text" name="besked" />
+          <input className='h-12 md:h-16 lg:h-24 pl-1 bg-white' type="text" name="besked" />
         </lable>
       </form>
-    
+    </div>
+
       <div className='flex justify-center pt-3'>
-        <button className='mr-4 h-8 transition duration-500'>Shoppen</button>
+        <button className='mr-4 h-8 transition duration-500'>Send</button>
       </div>
     {/* FORM END*/}
 
@@ -52,10 +55,12 @@ const Contact = () => {
       {/* RIGHT-SIDE */}
       <div className='p-5'>
 
+      <figure className='shadow-lg'>
         <img src={MAP} />
+      </figure>
 
-        <p>Lager adresse</p>
-        <p>Svinget 2, 8570 Trustrup, Lyngby</p>
+        <p className='font-bold text-lg text-black'>Lager adresse</p>
+        <p className='text-black'>Svinget 2, 8570 Trustrup, Lyngby</p>
 
       </div>
       {/* RIGHT-SIDE END */}

@@ -1,13 +1,14 @@
 import React from 'react'
 import Logo from '../components/Logo'
 import { AiFillYoutube, AiFillFacebook } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className='bg-black w-full flex flex-col text-white md-lg:grid md-lg:grid-cols-3 p-12 justify-between'>
 
-      <div className="flex items-center justify-center">
-          <Logo />
+      <div className="flex items-center justify-center hover:cursor-pointer">
+          <Link to="/"><Logo /></Link>
       </div>
 
       <div className="flex order-last pt-10 md-lg:pt-0 md-lg:order-none items-center justify-center">
