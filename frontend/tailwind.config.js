@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+
 
 module.exports = {
   content: [
@@ -13,7 +13,7 @@ module.exports = {
       secondary: '#E8E6E5',
       background: '#F5F5F5',
       text: '#747373',
-      title: colors.black,
+ 
     },
     fontFamily: {},
     extend: {},
