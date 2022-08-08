@@ -1,0 +1,49 @@
+{
+    "places": [
+        {
+            "img": "images/IMG-1.jpg",
+            "title": "lorem ibsum",
+            "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has "
+        },
+        {
+            "img": "images/IMG-2.jpg",
+            "title": "lorem ibsum",
+            "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has "
+        },
+        {
+            "img": "images/IMG-3.jpg",
+            "title": "lorem ibsum",
+            "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has "
+        },
+        {
+            "img": "images/IMG-4.jpg",
+            "title": "lorem ibsum",
+            "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has "
+        },
+        {
+            "img": "images/IMG-5.jpg",
+            "title": "lorem ibsum",
+            "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has "
+        },
+        {
+            "img": "images/IMG-6.jpg",
+            "title": "lorem ibsum",
+            "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has "
+        },
+        {
+            "img": "images/IMG-7.jpg",
+            "title": "lorem ibsum",
+            "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has "
+        },
+        {
+            "img": "images/IMG-8.jpg",
+            "title": "lorem ibsum",
+            "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has "
+        },
+        {
+            "img": "images/IMG-9.jpg",
+            "title": "lorem ibsum",
+            "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has "
+        }
+    ]
+}
