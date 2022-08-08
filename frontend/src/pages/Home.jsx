@@ -2,8 +2,9 @@ import React from "react";
 import { AiFillYoutube, AiFillFacebook } from "react-icons/ai";
 import { BsMouse } from "react-icons/bs";
 import Line from "../components/Line";
+// import HomeCard from "./components/HomeCard";
 
-import PlacesCard from "./components/PlacesCard";
+// import PlacesCard from "./components/PlacesCard";
 
 const Home = () => {
   const scrollToNextSection = () => {
@@ -11,9 +12,11 @@ const Home = () => {
     nextPage.scrollIntoView({ behavior: "smooth" });
   };
 
+
+
   return (
-    <section>
-      <div className="h-screen bg-black w-screen flex justify-center">
+    <section className="">
+      <div className="h-screen pt-6 bg-black w-screen flex justify-center">
 
         <div className="absolute md:block hidden">
           <div className=" w-screen relative h-screen ">
@@ -66,7 +69,7 @@ const Home = () => {
         <div className="bg-secondary h-full p-5 flex gap-5 flex-col
         md:flex-row md:p-12
         ">
-          <figure className="h-1/3 w-full bg-white">
+          <figure className="h-full w-full bg-white">
             <img src="" alt="" />
           </figure>
           <div className="my-auto">
@@ -86,8 +89,10 @@ const Home = () => {
       <div></div>
 
       {/* cards */}
-      <div>
-        <PlacesCard />
+      <div className="grid grid-cols-3">
+        <div className="h-20 w-20 bg-primary">f</div>
+
+        {/* <PlacesCard /> */}
       </div>
     </section>
   );
