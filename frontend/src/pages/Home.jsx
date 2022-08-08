@@ -2,7 +2,7 @@ import React from "react";
 import { AiFillYoutube, AiFillFacebook } from "react-icons/ai";
 import { BsMouse } from "react-icons/bs";
 import Line from "../components/Line";
-// import HomeCard from "./components/HomeCard";
+import HomeCard from "./components/HomeCard";
 
 // import PlacesCard from "./components/PlacesCard";
 

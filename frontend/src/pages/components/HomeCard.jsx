@@ -1,18 +1,22 @@
 import React from 'react'
 import PlacesCard from './PlacesCard';
+import data from "../../assets/data.json";
 
 
 
-const HomeCard = this.props.data?.map(
+const HomeCard = () => {
+    const film = this.props.data?.map(
     (item, index) => 
-      index < 3 && ( // <= only 5 items
+      index < 5 && ( // <= only 5 items
         <PlacesCard
           key={item.id} 
-          HomeCard={item} 
+          film={item} 
         />
       )
   );
   
-
+  return film;
+}
 
 export default HomeCard
+
