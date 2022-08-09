@@ -25,7 +25,7 @@ const Places = () => {
       <div className="h-3/4 pt-12 grid md:grid-cols-3 grid-cols-2 p-5 gap-8 justify-items-center w-screen">
         {/* CARDS SECTION */}
         {data.places.map((item, i) => (
-          <div className="max-w-sm rounded overflow-hidden shadow-lg">
+          <div key={i} className="max-w-sm rounded overflow-hidden shadow-lg">
             <img
               className="w-full"
               src={item.img}

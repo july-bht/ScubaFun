@@ -32,15 +32,15 @@ const Contact = () => {
           <input className='p-1 bg-white' type="text" name="name" />
         </label>
         
-        <lable className='flex text-black flex-col'>
+        <label className='flex text-black flex-col'>
           Email:
           <input className='p-1 bg-white' type="text" name="email" />
-        </lable>
+        </label>
 
-        <lable className='flex text-black flex-col'>
+        <label className='flex text-black flex-col'>
           Besked:
           <input className='h-12 md:h-16 lg:h-24 pl-1 bg-white' type="text" name="besked" />
-        </lable>
+        </label>
       </form>
     </div>
 
@@ -56,7 +56,7 @@ const Contact = () => {
       <div className='p-5'>
 
       <figure className='shadow-lg'>
-        <img src={MAP} />
+        <img src={MAP} alt="" />
       </figure>
 
         <p className='font-bold text-lg text-black'>Lager adresse</p>
