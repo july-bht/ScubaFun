@@ -8,7 +8,7 @@ const Header = () => {
     return (
 
         <header className='header h-20'>
-            <div className=' z-10 flex justify-between w-screen p-5 fixed bg-black'>
+            <div className=' z-40 flex justify-between w-screen p-5 fixed bg-black'>
                 <figure className='flex items-center hover:cursor-pointer'>
                     <Link to="/"><Logo /></Link>
                 </figure>
