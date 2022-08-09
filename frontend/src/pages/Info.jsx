@@ -1,6 +1,17 @@
 import React from 'react'
 import Line from "../components/Line";
 
+
+  const open = () => {
+    if (document.querySelector("#accordion").style.display = "block"){
+        document.querySelector("#accordion").style.display="none";
+    } else {
+      document.querySelector("#accordion").style.display="block";
+
+    }
+  }
+
+
 const Info = () => {
   return (
     <section className='sm:pt-8 sm:justify-center'>
@@ -15,8 +26,11 @@ const Info = () => {
       {/* Left side */}
       <div className='sm:p-8 sm:pl-8'>
         <div className='mb-6'>
+          <div className='flex'>
           <p className='font-bold text-black'>Hvem kan deltage</p>
-          <p className='text-black'>
+          <button onClick={open} id='block sm:hidden'>^</button>
+          </div>
+          <p id='accordion' className='text-black hidden text-sm sm:block'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae repellendus obcaecati ratione at, id excepturi quibusdam eum saepe! Culpa libero veniam nisi labore consequatur voluptatum laudantium facere at sapiente repellat.
             Totam libero esse in maiores mollitia, molestias, facere amet voluptatibus consectetur, corporis vitae perspiciatis. Neque adipisci deleniti assumenda architecto nisi, cum nam ducimus provident aperiam, ipsam repellendus! Consequatur, doloribus! Molestiae.
           </p>
