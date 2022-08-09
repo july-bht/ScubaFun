@@ -2,7 +2,8 @@ import React from "react";
 import { AiFillYoutube, AiFillFacebook } from "react-icons/ai";
 import { BsMouse } from "react-icons/bs";
 import Line from "../components/Line";
-// import HomeCard from "./components/HomeCard";
+import HomeCard from "./components/HomeCard";
+import data from "../assets/data.json";
 
 // import PlacesCard from "./components/PlacesCard";
 
@@ -12,13 +13,21 @@ const Home = () => {
     nextPage.scrollIntoView({ behavior: "smooth" });
   };
 
-
-
   return (
     <section className="">
-      <div className="h-screen pt-6 bg-black w-screen flex justify-center">
+      {/* hero */}
 
-        <div className="absolute md:block hidden">
+      <div className="h-screen pt-6  w-screen  justify-center">
+        <div>
+          <div className="z-10 h-full w-full absolute bg-black opacity-50"></div>
+          <img
+            className="z-0 h-full w-full absolute"
+            src={data.home.hero.img}
+            alt={data.home.hero.alt}
+          />
+        </div>
+
+        <div className="absolute z-30 md:block hidden">
           <div className=" w-screen relative h-screen ">
             <div className="mb-32 absolute bottom-0 left-0">
               <div className="y-line"></div>
@@ -44,31 +53,40 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="my-auto text-center ">
-          <h1 className="lg:text-6xl font-bold text-white 
+        <div className="absolute  z-20 w-full h-full grid content-center  justify-center">
+          <div className=" bg-black  text-center">
+            <h1
+              className="lg:text-6xl font-bold text-white 
           text-4xl
-          ">
-            Djursland <br />
-            under <span className="text-primary">overfladen</span>
-          </h1>
-          <br />
-          <p className="mx-auto 
+          "
+            >
+              Djursland <br />
+              under <span className="text-primary">overfladen</span>
+            </h1>
+            <br />
+            <p
+              className="mx-auto bg-primary
           w-full px-4 text-sm
-          lg:w-1/2 lg:px-0 lg:text-base">
-            Djursland rummer mange unikke naturoplevelser både over og under
-            vandet. Er du certificeret dykker har du mulighed for at deltage i
-            vores mange guidede ture på forskellige destinationer rund omkring
-            Djursland.{" "}
-          </p>
+          lg:w-1/2 lg:px-0 lg:text-base"
+            >
+              {data.home.hero.text}
+            </p>
+          </div>
         </div>
       </div>
+      {/*  */}
 
       {/* Info */}
-      <div className="h-screen p-5 text-center
-      md:p-12" id="nextSection">
-        <div className="bg-secondary h-full p-5 flex gap-5 flex-col
+      <div
+        className="h-screen p-5 text-center
+      md:p-12"
+        id="nextSection"
+      >
+        <div
+          className="bg-secondary h-full p-5 flex gap-5 flex-col
         md:flex-row md:p-12
-        ">
+        "
+        >
           <figure className="h-full w-full bg-white">
             <img src="" alt="" />
           </figure>
