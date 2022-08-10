@@ -78,15 +78,17 @@ const Info = () => {
         <Container>
           {data.info.map((item, index) => {
             return (
-              <section className="grid md:grid-cols-2">
+              <section className="grid lg:px-48 md:px-44 sm:px-40">
               <div className="pb-5">
                 <Wrap onClick={() => toggle(index)} key={index}>
                   <p className="text-2xl text-white">{item.title}</p>
                   <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
                 </Wrap>
                 {clicked === index ? (
-                  <Dropdown>
+                  <Dropdown className="flex justify-start items-start py-4">
+                    <div className="py-6">
                     <h4 className="text-white">{item.text}</h4>
+                    </div>
                   </Dropdown>
                 ) : null}
               </div>
