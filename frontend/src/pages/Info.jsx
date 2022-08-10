@@ -69,12 +69,12 @@ const Info = () => {
 
   return (
     <section className="pt-8">
-    <div className='sm:text-center'>
-    <h2 className='sm:text-3xl sm:font-bold'>Praktisk Informasjon</h2>
+    <div className='text-center'>
+    <h2 className='text-3xl font-bold'>Praktisk Informasjon</h2>
     < Line />
   </div>
     <IconContext.Provider value={{ color: '#00FFB9', size: '25px' }}>
-      <AccordionSection>
+      <AccordionSection className="">
         <Container>
           {data.info.map((item, index) => {
             return (
