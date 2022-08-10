@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 const Header = () => {
     return (
 
-        <header className='header h-20'>
-            <div className=' z-40 flex justify-between w-screen p-5 fixed bg-black'>
+        <header className='header w-full h-20 z-40 flex justify-between  p-5 fixed bg-black'>
+           
                 <figure className='flex items-center hover:cursor-pointer'>
                     <Link to="/"><Logo /></Link>
                 </figure>
@@ -18,7 +18,7 @@ const Header = () => {
                     <button className='hidden px-4 py-1 md-lg:block transition duration-500'>Shoppen</button>
                     </div>
                 </div>
-            </div>
+         
         </header>
     
     )

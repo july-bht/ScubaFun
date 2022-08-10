@@ -13,7 +13,7 @@ import AdminHome from "./pages/admin/AdminHome";
 
 function App() {
   return (
-    <div className="App">
+    <div className="w-screen overflow-hidden relative">
       <Router>
 
         {/* Public */}

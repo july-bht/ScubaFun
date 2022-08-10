@@ -13,6 +13,17 @@ section{
 p {
   @apply text-text;
 }
+
+/* mobile scroll */
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+/*  */
+
 /* button */
 button {
   @apply border border-primary text-primary py-0 px-6 uppercase

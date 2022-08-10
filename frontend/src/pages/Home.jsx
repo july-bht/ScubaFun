@@ -1,8 +1,11 @@
 import React from "react";
 import { AiFillYoutube, AiFillFacebook } from "react-icons/ai";
 import { BsMouse } from "react-icons/bs";
-import Line from "../components/Line";
-import HomeCard from "./components/HomeCard";
+
+import PlacesCard from "./components/HomePlacesCard";
+import TripsCard from "./components/HomeTripsCard";
+import Info from "./components/HomeInfo";
+
 import data from "../assets/data.json";
 
 // import PlacesCard from "./components/PlacesCard";
@@ -14,14 +17,14 @@ const Home = () => {
   };
 
   return (
-    <section className="">
+    <section className=" relative  ">
       {/* hero */}
 
-      <div className="h-screen pt-6  w-screen  justify-center">
+      <div className="h-screen   relative  justify-center">
         <div>
-          <div className="z-10 h-full w-full absolute bg-black opacity-50"></div>
+          <div className="z-10 h-full w-full absolute bg-black opacity-70"></div>
           <img
-            className="z-0 h-full w-full absolute"
+            className="z-0 h-screen object-cover  w-full absolute"
             src={data.home.hero.img}
             alt={data.home.hero.alt}
           />
@@ -54,7 +57,7 @@ const Home = () => {
         </div>
 
         <div className="absolute  z-20 w-full h-full grid content-center  justify-center">
-          <div className=" bg-black  text-center">
+          <div className="  text-center">
             <h1
               className="lg:text-6xl font-bold text-white 
           text-4xl
@@ -74,44 +77,27 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/*  */}
 
-      {/* Info */}
-      <div
-        className="h-screen p-5 text-center
-      md:p-12"
-        id="nextSection"
-      >
-        <div
-          className="bg-secondary h-full p-5 flex gap-5 flex-col
-        md:flex-row md:p-12
-        "
-        >
-          <figure className="h-full w-full bg-white">
-            <img src="" alt="" />
-          </figure>
-          <div className="my-auto">
-            <h3 className="title">Lorem ibsum</h3>
-            <Line />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              fugit nulla minima nihil itaque esse eum qui consequatur autem
-              ducimus, corrupti modi. Magnam corporis, nobis voluptates rem
-              dolor odio minus.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* next trips */}
-      <div></div>
-
+      <Info />
+      <TripsCard />
+      <PlacesCard />
       {/* cards */}
-      <div className="grid grid-cols-3">
-        <div className="h-20 w-20 bg-primary">f</div>
+      {/* <div className="snap-mandatory snap-x bg-primary   gap-2 flex h-max
+      overflow-x-auto 
+       mx-auto justify-center  
+      
+      sm:h-48 sm:my-10 sm:gap-5
+       md:h-52 md:px-20
+      lg:w-2/3 lg:h-72 lg:px-0
+      ">
 
-        {/* <PlacesCard /> */}
-      </div>
+      <div className=" w-96 snap-center
+     bg-secondary">f</div>
+      <div className="w-96 snap-center bg-secondary">f</div>
+      <div className="w-96 snap-center bg-secondary">f</div>
+
+        
+      </div> */}
     </section>
   );
 };
