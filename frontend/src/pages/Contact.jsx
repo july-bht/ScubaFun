@@ -4,12 +4,12 @@ import MAP from '../images/maps-google.png'
 
 const Contact = () => {
   return (
-    <div className='pt-5 flex justify-center'>
+    <div className='pt-24 flex justify-center '>
 
     <div className='w-3/5'>
 
     {/* TITLE */}
-    <div className='text-center'>
+    <div className='text-center pb-5'>
       <h2 className='text-4xl font-bold'>Kontakt</h2>
       < Line />
     </div>
@@ -25,26 +25,26 @@ const Contact = () => {
       <p className='flex justify-start text-black pb-8'>contact@scubafun.dk</p>
 </div>
     {/* FORM */}
-    <div className='bg-secondary'>
+    <div className='bg-secondary p-3 rounded'>
       <form className='flex flex-col p-2'>
         <label className='flex text-black flex-col'>
           Fulde navn:
-          <input className='p-1 bg-white' type="text" name="name" />
+          <input className='input' type="text" name="name" />
         </label>
         
         <label className='flex text-black flex-col'>
           Email:
-          <input className='p-1 bg-white' type="text" name="email" />
+          <input className='input' type="text" name="email" />
         </label>
 
         <label className='flex text-black flex-col'>
           Besked:
-          <input className='h-12 md:h-16 lg:h-24 pl-1 bg-white' type="text" name="besked" />
+          <input className='input h-12 md:h-16 lg:h-24' type="text" name="besked" />
         </label>
       </form>
     </div>
 
-      <div className='flex justify-center pt-3'>
+      <div className='flex justify-center pb-3 pt-7'>
         <button className='mr-4 h-8 transition duration-500'>Send</button>
       </div>
     {/* FORM END*/}
@@ -55,8 +55,8 @@ const Contact = () => {
       {/* RIGHT-SIDE */}
       <div className='p-5'>
 
-      <figure className='shadow-lg'>
-        <img src={MAP} alt="" />
+      <figure className='rounded h-80 shadow-lg mb-5'>
+        <img className='rounded h-full object-cover' src={MAP} alt="" />
       </figure>
 
         <p className='font-bold text-lg text-black'>Lager adresse</p>
