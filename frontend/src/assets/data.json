@@ -21,26 +21,29 @@
         {
             "title": "Båddykning",
             "img": "",
+            "alt":"",
             "price": "300",
             "place": "en eller anden strand",
             "time": "7:00 - 9:00",
             "date": "25/9 - 2022"
         },
         {
-            "title": "",
+            "title": "Båddykning",
             "img": "",
-            "price": "250",
-            "place": "",
-            "time": "",
-            "date": ""
+            "alt":"",
+            "price": "300",
+            "place": "en eller anden strand",
+            "time": "7:00 - 9:00",
+            "date": "25/9 - 2022"
         },
         {
-            "title": "",
+            "title": "Båddykning",
             "img": "",
-            "price": "",
-            "place": "",
-            "time": "",
-            "date": ""
+            "alt":"",
+            "price": "300",
+            "place": "en eller anden strand",
+            "time": "7:00 - 9:00",
+            "date": "25/9 - 2022"
         }
     ],
     "places": [
