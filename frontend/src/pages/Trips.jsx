@@ -1,6 +1,7 @@
 import React from "react";
 import Line from "../components/Line";
-import Card from "./components/TripCard";
+// import Card from "./components/TripCard";
+import Modal from "./components/modaltest";
 
 const Trips = () => {
   return (
@@ -15,8 +16,9 @@ const Trips = () => {
 
         {/* filter */}
         <div></div>
+        <Modal/>
 
-       <Card/>
+       {/* <Card/> */}
       </div>
     </section>
   );

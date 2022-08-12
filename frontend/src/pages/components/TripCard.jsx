@@ -1,6 +1,6 @@
 import React from 'react';
 import data from"../../assets/data.json";
-import Modal from "./TripModal"
+
 
 
 const Card = () => {
@@ -31,20 +31,20 @@ const closeModal = () => {
        </div>
 
        {/* info */}
-       <div className="bg-secondary grid grid-cols-1 place-items-center content-center px-8 ">
+       <div className="relative bg-secondary grid grid-cols-1 place-items-center content-center px-8 ">
        
             <h5 className="small-title">{i.title}</h5>
 
          {/* læs mere onclick modal */}
         
           {/* onclick open Modal */}
-          <p onClick={openModal} className="text-center hover:text-primary">læs mere</p>
+          <p onClick={openModal} className="text-center hover:text-primary cursor-pointer">læs mere</p>
 
           <div className=' fixed top-0  left-0 z-100 modal-overlay h-screen w-screen bg-black opacity-50 hidden'>
             <div className='h-1/2 w-1/2 bg-black bg-opacity-90 p-5'>
               <div className='flex justify-between '>
                 <p> Båddykning</p>
-              <div className='text-white' onClick={closeModal}> &times;</div>
+              <div className='text-white cursor-pointer' onClick={closeModal}> &times;</div>
               </div>
               <img src="" alt="" />
               <div className="flex">
