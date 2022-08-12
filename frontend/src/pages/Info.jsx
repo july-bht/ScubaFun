@@ -17,7 +17,7 @@ const AccordionSection = styled.div`
 
 const Container = styled.div`
   position: absolute;
-  top: 30%;
+  top: 0;
   box-shadow: 2px 10px 35px 1px rgba(153, 153, 153, 0.3);
 `;
 
@@ -43,7 +43,7 @@ const Dropdown = styled.div`
   background: #1c1c1c;
   color: #00ffb9;
   width: 100%;
-  height: 100px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,26 +68,26 @@ const Info = () => {
   };
 
   return (
-    <section className="pt-8">
-    <div className='text-center'>
+    <section>
+    <div className='text-center pt-24'>
     <h2 className='text-3xl font-bold'>Praktisk Informasjon</h2>
     < Line />
   </div>
     <IconContext.Provider value={{ color: '#00FFB9', size: '25px' }}>
-      <AccordionSection className="">
+      <AccordionSection>
         <Container>
           {data.info.map((item, index) => {
             return (
-              <section className="grid lg:px-48 md:px-44 sm:px-40">
-              <div className="pb-5">
-                <Wrap onClick={() => toggle(index)} key={index}>
-                  <p className="text-2xl text-white">{item.title}</p>
+              <section className="grid lg:px-48 md:px-8">
+              <div className="pb-4">
+                <Wrap className="p-2" onClick={() => toggle(index)} key={index}>
+                  <p className="sm:text-2xl text-xl text-white">{item.title}</p>
                   <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
                 </Wrap>
                 {clicked === index ? (
-                  <Dropdown className="flex justify-start items-start py-4">
-                    <div className="py-6">
-                    <h4 className="text-white">{item.text}</h4>
+                  <Dropdown className="h-auto">
+                    <div className="py-1 px-2">
+                    <h4 className="text-white text-sm md:text-base">{item.text}</h4>
                     </div>
                   </Dropdown>
                 ) : null}
@@ -97,7 +97,8 @@ const Info = () => {
           })}
         </Container>
       </AccordionSection>
-    </IconContext.Provider></section>
+    </IconContext.Provider>
+    </section>
   );
 };
 

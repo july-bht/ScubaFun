@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
 
-    <footer className='w-full hidden bg-black flex flex-col text-white md-lg:grid md-lg:grid-cols-3 p-12 justify-between'>
+    <footer className='w-full bg-black flex flex-col text-white md-lg:grid md-lg:grid-cols-3 p-12 justify-between'>
 
       <div className="flex items-center justify-center hover:cursor-pointer">
           <Link to="/"><Logo /></Link>

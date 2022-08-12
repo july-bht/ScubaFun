@@ -40,7 +40,7 @@ button {
 }
 
 .input{
-  @apply p-1 bg-white rounded-lg shadow-inner;
+  @apply bg-white rounded;
 }
 
 /* classes */
@@ -61,8 +61,3 @@ button {
   @apply bg-white;
 }
 
-/* 
-
-.visible{
-  @apply opacity-100 block;
-} */
