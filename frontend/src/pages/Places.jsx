@@ -1,19 +1,24 @@
 import React from "react";
 import Line from "../components/Line";
 import data from "../assets/data.json";
+import MAP from '../images/maps-google.png'
 
 import PlacesAside from "./components/PlacesAside";
 
 const Places = () => {
   return (
-    <section>
+    <section className="pt-10">
       {/* search aside */}
+      <div>
       <PlacesAside />
-
+      <figure className='shadow-lg'>
+        <img src={MAP} className="w-full h-80" alt="MAP" />
+      </figure>
+      </div>
       {/* map  */}
 
       {/* TITLE */}
-      <div>
+      <div className="pt-8">
         <p className="flex justify-center text-4xl font-bold text-black">
           Dykker Steder
         </p>
