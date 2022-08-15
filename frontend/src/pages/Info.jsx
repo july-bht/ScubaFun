@@ -1,9 +1,9 @@
 import Line from "../components/Line";
-import React, { useState } from 'react';
-import data from '../assets/data.json';
-import styled from 'styled-components';
-import { IconContext } from 'react-icons';
-import { FiPlus, FiMinus } from 'react-icons/fi';
+import React, { useState } from "react";
+import data from "../assets/data.json";
+import styled from "styled-components";
+import { IconContext } from "react-icons";
+import { FiPlus, FiMinus } from "react-icons/fi";
 
 const AccordionSection = styled.div`
   display: flex;
@@ -58,7 +58,7 @@ const Dropdown = styled.div`
 const Info = () => {
   const [clicked, setClicked] = useState(false);
 
-  const toggle = index => {
+  const toggle = (index) => {
     if (clicked === index) {
       //if clicked question is already active, then close it
       return setClicked(null);
@@ -69,35 +69,38 @@ const Info = () => {
 
   return (
     <section className="pt-8">
-    <div className='text-center'>
-    <h2 className='text-3xl font-bold'>Praktisk Informasjon</h2>
-    < Line />
-  </div>
-    <IconContext.Provider value={{ color: '#00FFB9', size: '25px' }}>
-      <AccordionSection className="">
-        <Container>
-          {data.info.map((item, index) => {
-            return (
-              <section className="grid lg:px-48 md:px-44 sm:px-40">
-              <div className="pb-5">
-                <Wrap onClick={() => toggle(index)} key={index}>
-                  <p className="text-2xl text-white">{item.title}</p>
-                  <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
-                </Wrap>
-                {clicked === index ? (
-                  <Dropdown className="flex justify-start items-start py-4">
-                    <div className="py-6">
-                    <h4 className="text-white">{item.text}</h4>
-                    </div>
-                  </Dropdown>
-                ) : null}
-              </div>
-              </section>
-            );
-          })}
-        </Container>
-      </AccordionSection>
-    </IconContext.Provider></section>
+      <div className="text-center">
+        <h2 className="text-3xl font-bold">Praktisk Informasjon</h2>
+        <Line />
+      </div>
+      <IconContext.Provider value={{ color: "#00FFB9", size: "25px" }}>
+        <AccordionSection className="">
+          <Container>
+            {data.info.map((item, index) => {
+              return (
+                <section className="grid lg:px-48 md:px-44 sm:px-40">
+                  <div className="pb-5">
+                    <Wrap onClick={() => toggle(index)} key={index}>
+                      <p className="text-2xl text-white">{item.title}</p>
+                      <span>
+                        {clicked === index ? <FiMinus /> : <FiPlus />}
+                      </span>
+                    </Wrap>
+                    {clicked === index ? (
+                      <Dropdown className="flex justify-start items-start py-4">
+                        <div className="py-6">
+                          <h4 className="text-white">{item.text}</h4>
+                        </div>
+                      </Dropdown>
+                    ) : null}
+                  </div>
+                </section>
+              );
+            })}
+          </Container>
+        </AccordionSection>
+      </IconContext.Provider>
+    </section>
   );
 };
 
