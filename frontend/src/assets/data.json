@@ -15,7 +15,37 @@
             "description": "Har du taget certifikat for nylig og har brug for lidt mere erfaring er vores guidede ture lige noget for dig. Vi dykker forskellige destinationer alt efter vind og vejr så du har mulighed for at prøve lidt forskelligt. Er det længere tid siden du har dykket er det også en mulighed for en genopfriskning af dine dykkerfærdigheder eller bare. "
         }
     },
-    
+
+    "trips": [
+        {
+            "title": "Båddykning",
+            "img": "",
+            "alt":"",
+            "price": "300",
+            "place": "en eller anden strand",
+            "time": "7:00 - 9:00",
+            "date": "25/9 - 2022"
+        },
+        {
+            "title": "Båddykning",
+            "img": "",
+            "alt":"",
+            "price": "300",
+            "place": "en eller anden strand",
+            "time": "7:00 - 9:00",
+            "date": "25/9 - 2022"
+        },
+        {
+
+            "title": "Båddykning",
+            "img": "",
+            "alt":"",
+            "price": "300",
+            "place": "en eller anden strand",
+            "time": "7:00 - 9:00",
+            "date": "25/9 - 2022"
+        }
+    ],
     "places": [
         {
             "img": "images/IMG-1.jpg",
