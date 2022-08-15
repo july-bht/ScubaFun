@@ -56,6 +56,7 @@ const Dropdown = styled.div`
 `;
 
 const Info = () => {
+
   const [clicked, setClicked] = useState(false);
 
   const toggle = (index) => {
