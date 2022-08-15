@@ -102,37 +102,6 @@ const Info = () => {
         </AccordionSection>
       </IconContext.Provider>
 
-    <section>
-    <div className='text-center pt-24'>
-    <h2 className='text-3xl font-bold'>Praktisk Informasjon</h2>
-    < Line />
-  </div>
-    <IconContext.Provider value={{ color: '#00FFB9', size: '25px' }}>
-      <AccordionSection>
-        <Container>
-          {data.info.map((item, index) => {
-            return (
-              <section className="grid lg:px-48 md:px-8">
-              <div className="pb-4">
-                <Wrap className="p-2" onClick={() => toggle(index)} key={index}>
-                  <p className="sm:text-2xl text-xl text-white">{item.title}</p>
-                  <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
-                </Wrap>
-                {clicked === index ? (
-                  <Dropdown className="h-auto">
-                    <div className="py-1 px-2">
-                    <h4 className="text-white text-sm md:text-base">{item.text}</h4>
-                    </div>
-                  </Dropdown>
-                ) : null}
-              </div>
-              </section>
-            );
-          })}
-        </Container>
-      </AccordionSection>
-    </IconContext.Provider>
-
     </section>
   );
 };
