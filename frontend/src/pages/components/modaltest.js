@@ -7,15 +7,15 @@ export default function Modal() {
 
   return (
     <>
-       <div
-        className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+      <div
+        className="cursor-pointer"
         type="button"
         onClick={() => setShowModal(true)}
       >
         Læs mere
       </div>
 
-     {showModal ? (
+      {showModal ? (
         <>
           <div
             className="z-80 justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
@@ -56,7 +56,7 @@ export default function Modal() {
                   >
                     Close
                   </button>
-             
+
                 </div>
               </div>
             </div>
@@ -64,12 +64,6 @@ export default function Modal() {
           <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
         </>
       ) : null}
-  
-
-
-
-
-     
     </>
   );
 }
