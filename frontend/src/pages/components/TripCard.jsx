@@ -32,8 +32,8 @@ const Card = () => {
               <h5 className="small-title">{i.title}</h5>
               <p
                 className="cursor-pointer hover:text-secondary"
-                // type="button"
-                // onClick={() => setShowModal(true)}
+                type="button"
+                onClick={() => setShowModal(true)}
               >
                 Læs mere
               </p>
@@ -59,7 +59,7 @@ const Card = () => {
       {showModal ? (
         <>
           <div className="h-screen w-screen justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative  my-6 mx-auto max-w-3xl w-96 ">
+          <div className="relative  my-6 mx-auto max-w-3xl w-96 ">
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-black opacity-80 outline-none focus:outline-none">
                 {/*header*/}
