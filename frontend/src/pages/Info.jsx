@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import data from '../assets/data.json';
 import { IconContext } from 'react-icons';
 import { FiPlus, FiMinus } from 'react-icons/fi';
-import MAP from '../images/maps-google.png'
+import infoIMG from '../images/info-IMG.jpg'
 
 
 
@@ -20,10 +20,10 @@ const Info = () => {
   };
 
   return (
-    <section className="pt-24">
+    <section className="pt-20">
   
       <figure>
-        <img className="w-full h-80" src={MAP} />
+        <img className="w-full h-3/5 sm:h-80" src={infoIMG} />
       </figure>
 
     <div className='text-center pt-12 mb-12'>

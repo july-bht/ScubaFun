@@ -57,7 +57,7 @@ const Contact = () => {
       <div className='p-5'>
 
       <figure className='shadow-lg'>
-        <img className='' src={MAP} alt="MAP" />
+        <img className='w-full h-full' src={MAP} alt="MAP" />
       </figure>
 
         <p className='font-bold text-lg text-black'>Lager adresse</p>
