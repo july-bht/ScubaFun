@@ -17,7 +17,7 @@ const Home = () => {
   };
 
   return (
-    <section className=" relative  ">
+    <section>
       {/* hero */}
 
       <div className="h-screen   relative  justify-center">
