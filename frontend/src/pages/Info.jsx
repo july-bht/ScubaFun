@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import data from '../assets/data.json';
 import { IconContext } from 'react-icons';
 import { FiPlus, FiMinus } from 'react-icons/fi';
+import MAP from '../images/maps-google.png'
+
 
 
 const Info = () => {
@@ -18,9 +20,13 @@ const Info = () => {
   };
 
   return (
-    <section>
+    <section className="pt-24">
   
-    <div className='text-center pt-24 mb-12'>
+      <figure>
+        <img className="w-full h-80" src={MAP} />
+      </figure>
+
+    <div className='text-center pt-12 mb-12'>
     <h2 className='text-3xl font-bold'>Praktisk Informasjon</h2>
     < Line />
   </div>
