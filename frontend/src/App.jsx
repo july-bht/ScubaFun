@@ -8,6 +8,7 @@ import Trips from "./pages/Trips";
 import Places from "./pages/Places";
 import Info from "./pages/Info";
 import Contact from "./pages/Contact";
+import SignUp from "./pages/SignUp";
 
 import AdminHome from "./pages/admin/AdminHome";
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="places" element={<Places />} />
             <Route path="info" element={<Info />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="signUp" element={<SignUp />} />
           </Route>
 
           {/* ADMIN-routes  */}

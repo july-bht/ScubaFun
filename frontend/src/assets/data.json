@@ -15,54 +15,49 @@
             "description": "Har du taget certifikat for nylig og har brug for lidt mere erfaring er vores guidede ture lige noget for dig. Vi dykker forskellige destinationer alt efter vind og vejr så du har mulighed for at prøve lidt forskelligt. Er det længere tid siden du har dykket er det også en mulighed for en genopfriskning af dine dykkerfærdigheder eller bare. "
         }
     },
-
-    "trips":
-[
+    "trips": [
         {
             "title": "Båddykning",
             "img": "",
-            "alt":"",
+            "alt": "",
             "price": "300",
             "place": "en eller anden strand",
             "time": "7:00 - 9:00",
             "date": "25/9 - 2022",
             "modal": {
-                "description":"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC.",
-                "content-left":{
-                    "title":"Medbring:",
-                    "list":[
+                "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC.",
+                "content-left": {
+                    "title": "Medbring:",
+                    "list": [
                         "Håndklæde",
                         "Badetøj",
                         "Mad og drikke",
                         "Samt godt humør"
                     ],
-                    "info":"Har du en dykkermaske eller lignende du er glad for at bruge, må du selvfølgelig gerne tage den med.",
-                    "extra":"(Medbring gerne kamera)"
+                    "info": "Har du en dykkermaske eller lignende du er glad for at bruge, må du selvfølgelig gerne tage den med.",
+                    "extra": "(Medbring gerne kamera)"
                 }
             }
         },
         {
             "title": "Båddykning",
             "img": "",
-            "alt":"",
+            "alt": "",
             "price": "300",
             "place": "en eller anden strand",
             "time": "7:00 - 9:00",
             "date": "25/9 - 2022"
         },
         {
-
             "title": "Båddykning",
             "img": "",
-            "alt":"",
+            "alt": "",
             "price": "300",
             "place": "en eller anden strand",
             "time": "7:00 - 9:00",
             "date": "25/9 - 2022"
         }
     ],
-    
-    
     "places": [
         {
             "img": "images/IMG-1.jpg",
@@ -151,14 +146,5 @@
             "title": "Grill",
             "text": "På nogle af vores ture er der grill efterfølgende. Prisen vil på sådan en tur være 25 kr. højre for at dække dette. Der er ikke drikkevarer med i prisen."
         }
-
-      
-        
-        
-
-    
-        
-        
-        
     ]
-}
+} 

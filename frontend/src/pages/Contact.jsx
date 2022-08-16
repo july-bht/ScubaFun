@@ -1,10 +1,11 @@
 import React from 'react'
 import Line from "../components/Line";
+import { NavLink } from 'react-router-dom'
 import MAP from '../images/maps-google.png'
 
 const Contact = () => {
   return (
-    <div className='pt-5 flex justify-center'>
+    <div className='pt-32 flex justify-center'>
 
     <div className='w-3/5'>
 
@@ -45,7 +46,7 @@ const Contact = () => {
     </div>
 
       <div className='flex justify-center pt-3'>
-        <button className='mr-4 h-8 transition duration-500'>Send</button>
+        <NavLink path to="/signUp"><button className='mr-4 h-8 transition duration-500'>Send</button></NavLink>
       </div>
     {/* FORM END*/}
 
@@ -56,7 +57,7 @@ const Contact = () => {
       <div className='p-5'>
 
       <figure className='shadow-lg'>
-        <img src={MAP} alt="MAP" />
+        <img className='' src={MAP} alt="MAP" />
       </figure>
 
         <p className='font-bold text-lg text-black'>Lager adresse</p>

@@ -1,10 +1,6 @@
 import React from "react";
 import Line from "../components/Line";
 
-// import Card from "./components/TripCard";
-import Card from "./components/TripCard";
-
-
 const Trips = () => {
   return (
     <section className=" pt-24 text-center">
@@ -18,11 +14,6 @@ const Trips = () => {
 
         {/* filter */}
         <div></div>
-
-  
-
-       <Card/>
-
 
         <div className="pt-5 flex flex-col gap-5 justify-center container">
          
@@ -58,7 +49,6 @@ const Trips = () => {
             </figure>
           </div>
         </div>
-
       </div>
     </section>
   );
