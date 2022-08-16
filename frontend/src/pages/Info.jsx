@@ -19,13 +19,12 @@ const Info = () => {
 
   return (
     <section>
+  
     <div className='text-center pt-24 mb-12'>
     <h2 className='text-3xl font-bold'>Praktisk Informasjon</h2>
     < Line />
   </div>
-    <IconContext.Provider value={{ color: '#00FFB9', size: '25px' }}>
-      <div className="relative h-screen mb-32 sm:mb-0">
-        <div className="absolute top-0">
+      <div className="pb-24">
           {data.info.map((item, index) => {
             return (
               <section className="grid lg:px-80 md:px-8">
@@ -46,15 +45,14 @@ const Info = () => {
             );
           })}
 
-      <div className="lg:px-80 md:px-8 pt-5">
+      <section className="lg:px-80 md:px-8 pt-5">
         <div className="bg-secondary flex flex-col px-8 p-5 justify-between w-full text-center cursor-pointer">
            <p className="p-2 pl-4 font-bold text-2xl text-black grid justify-center">Andre spørgsmål</p>
            <p className="text-black text-base md:text-xl">Skulle du have yderlige spørgsmål er du meget velkommen til at kontakte os på sms/telefon +45 42 78 96 05 eller e-mail: contact@scubafun.dk.</p>
-        </div></div>   
-      </div>
+        </div>
+      </section> 
 
-      </div>
-    </IconContext.Provider>
+       </div>
     </section>
   );
 };
