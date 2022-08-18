@@ -1,27 +1,69 @@
-import React from 'react'
-import Logo from '../components/Logo'
-import Navigation from './Navigation'
-import { Link } from "react-router-dom";
+import React from "react";
+import Logo from "../components/Logo";
+import Navigation from "./Navigation";
+import { Link, NavLink } from "react-router-dom";
+import '../CSS/styles.css';
 
+const links = [
+  {
+    name: "Hjem",
+    to: "/",
+  },
+  {
+    name: "Dykkerture",
+    to: "/trips",
+  },
+  {
+    name: "Steder",
+    to: "/places",
+  },
+  {
+    name: "Info",
+    to: "/info",
+  },
+  {
+    name: "Kontakt",
+    to: "/contact",
+  },
+];
 
 const Header = () => {
-    return (
+  return (
+    <nav className="w-full flex justify-between px-4 py-8 mx-auto bg-black">
+      <figure className="flex items-center hover:cursor-pointer">
+        <Link to="/">
+          <Logo />
+        </Link>
+      </figure>
 
-        <header className='header w-full h-20 z-40 flex justify-between  p-5 fixed bg-black'>
-           
-                <figure className='flex items-center hover:cursor-pointer'>
-                    <Link to="/"><Logo /></Link>
-                </figure>
-                <div className='flex'>
-                    <Navigation />
-                    <div className='pr-6 px-5 py-4 flex items-center'>
-                    <button className='hidden px-4 py-1 md-lg:block transition duration-500'>Shoppen</button>
-                    </div>
-                </div>
-         
-        </header>
-    
-    )
-}
+      {/* Desktop Navigation */}
+      <div className="hidden  space-x-8 md:flex">
+        <div className="pr-6 px-1 py-4 gap-5 flex items-center">
+          {links.map((link) => (
+            <NavLink
+              className="my-auto  font-medium w-auto text-white text-base hover:text-primary"
+              key={link.name}
+              to={link.to}
+            >
+              {link.name}
+            </NavLink>
+          ))}
 
-export default Header
+          <button className="px-4 py-1 transition duration-500">
+            Shoppen
+          </button>
+        </div>
+      </div>
+      {/* Desktop Navigation END */}
+
+      {/* Ipad/Mobile Navigation */}
+      <div className="md:hidden">
+        <Navigation pageWrapId={"page-wrap"} outerContainerId={"App"} />
+      </div>
+      {/* Ipad/Mobile Navigation END */}
+
+    </nav>
+  );
+};
+
+export default Header;
