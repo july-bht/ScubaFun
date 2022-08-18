@@ -13,7 +13,7 @@ module.exports = {
       secondary: '#E8E6E5',
       background: '#F5F5F5',
       text: '#747373',
-      title: colors.black,
+      title: '#151515',
     },
     fontFamily: {},
     extend: {},
