@@ -11,7 +11,11 @@ section{
 }
 
 p {
-  @apply text-text;
+  @apply text-text text-sm md:text-base;
+}
+
+li{
+  @apply text-sm md:text-base;
 }
 
 /* mobile scroll */

@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import data from "../../assets/data.json";
 import {AiOutlineClose} from "react-icons/ai"
+  
+const ReadMore = ({ children }) => {
+  const text = children;
+  const [isReadMore, setIsReadMore] = useState(true);
+  const toggleReadMore = () => {
+    setIsReadMore(!isReadMore);
+  };
+  return (
+    <p className="text">
+      {isReadMore ? text.slice(0, 450) : text}
+      <span onClick={toggleReadMore} className="cursor-pointer text-white px-1">
+        {isReadMore ? "...Læs merre" : " Vis mindre"}
+      </span>
+    </p>
+  );
+};
 
-// {data.trips.map((i, key) => (
-
-// )))}
 
 const Card = () => {
   const [showModal, setShowModal] = React.useState(false);
@@ -56,7 +69,7 @@ const Card = () => {
           <div className="h-screen w-screen justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="relative  my-6 mx-auto max-w-3xl  ">
               {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg p-4 relative flex mt-20 flex-col w-full bg-black bg-opacity-90 outline-none focus:outline-none">
+              <div className="border-0 rounded-lg shadow-lg p-4 relative flex mt-20 flex-col w-full bg-black bg-opacity-80 outline-none focus:outline-none">
                 {/*header*/}
 
                 <div>
@@ -83,17 +96,21 @@ const Card = () => {
                     </div>
                  
                       <div className="flex gap-5 ">
-                        <p className="w-2/3 text-start my-4 pr-7 text-white opacity-80  leading-relaxed">
-                          {data.trips[0].modal.description}
+                        <p className="w-2/3 text-start my-4 pr-7 text-white opacity-80  leading-relaxed
+                        tex-sm md:text-base">
+                          <ReadMore>
+                                {data.trips[0].modal.description}
+                          </ReadMore>
+                      
                         </p>
                         <div className="w-1/3  text-start">
                           <h4 className="pb-3 text-white font-semibold opacity-90">
                             {data.trips[0].modal.contentRight.title}
                           </h4>
-                          <ul className="pb-5 text-white opacity-80">
+                          <ul className="pb-5 text-white opacity-80 pl-4">
                             {data.trips[0].modal.contentRight.list.map(
                               (i, key) => (
-                                <li key={key}>{i}</li>
+                                <li className=" list-disc " key={key}>{i}</li>
                               )
                             )}
                           </ul>
