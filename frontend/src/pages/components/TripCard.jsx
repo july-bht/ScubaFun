@@ -1,15 +1,10 @@
-
 import React from "react";
 import data from "../../assets/data.json";
+import {AiOutlineClose} from "react-icons/ai"
 
 // {data.trips.map((i, key) => (
 
-
 // )))}
-
-
-
-  
 
 const Card = () => {
   const [showModal, setShowModal] = React.useState(false);
@@ -59,44 +54,60 @@ const Card = () => {
       {showModal ? (
         <>
           <div className="h-screen w-screen justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-          <div className="relative  my-6 mx-auto max-w-3xl w-96 ">
+            <div className="relative  my-6 mx-auto max-w-3xl  ">
               {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-black opacity-80 outline-none focus:outline-none">
+              <div className="border-0 rounded-lg shadow-lg p-4 relative flex mt-20 flex-col w-full bg-black bg-opacity-90 outline-none focus:outline-none">
                 {/*header*/}
-                
-                  <div>
-                  <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                  <h3 className="text-3xl text-white font-semibold">
-                    Modal Title
-                  </h3>
-                  <button
-                    className="p-1 ml-auto bg-transparent border-0 text-white opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                    onClick={() => setShowModal(false)}
-                  >
-                    <span className="bg-transparent text-white opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-                      × frfer
-                    </span>
-                  </button>
-                </div>
-                {/*body*/}
-                <img className="w-full h-56 " src="" alt="" />
+
                 <div>
-                    <h3 className="text-white">båd</h3>
-                    <div></div>
-                </div>
-              
-                <div className="bg-black opacity-90">
-                  <div className="relative p-6 flex-auto">
-                    <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                      ncjncjenck
-                    </p>
+                  <div className="flex items-start justify-between pb-1 border-b border-solid border-slate-200 rounded-t">
+                    <p className="">Omkring turen</p>
+                    <button
+                      className="pb-2 ml-auto hover:bg-transparent bg-transparent border-0 text-white  float-right text-2xl leading-none font-semibold outline-none focus:outline-none"
+                      onClick={() => setShowModal(false)}
+                    >
+                     <AiOutlineClose className="" />
+                    </button>
                   </div>
-                  {/*footer*/}
-                  <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b"></div>
+                  {/*body*/}
+                  <img className="w-full h-40 object-cover " src={data.trips[0].img} alt="" />
+                  <div className="flex gap-5">
+                    <h3 className="text-white text-start p-2 text-3xl font-bold">{data.trips[0].title}</h3>
+                    <div className="bg-primary text-white font-semibold h-max py-2 px-4 mt-2">{data.trips[0].price}</div>
+                  </div>
+
+                  <div className="bg-black bg-opacity-80 h-max p-3">
+                    <div className="flex gap-5">
+                      <p>{data.trips[0].date}</p>
+                      <p>{data.trips[0].time}</p>
+                    </div>
+                 
+                      <div className="flex gap-5 ">
+                        <p className="w-2/3 text-start my-4 pr-7 text-white opacity-80  leading-relaxed">
+                          {data.trips[0].modal.description}
+                        </p>
+                        <div className="w-1/3  text-start">
+                          <h4 className="pb-3 text-white font-semibold opacity-90">
+                            {data.trips[0].modal.contentRight.title}
+                          </h4>
+                          <ul className="pb-5 text-white opacity-80">
+                            {data.trips[0].modal.contentRight.list.map(
+                              (i, key) => (
+                                <li key={key}>{i}</li>
+                              )
+                            )}
+                          </ul>
+                          <p className="text-white opacity-80"> {data.trips[0].modal.contentRight.info}</p>
+                          <p className="text-white opacity-80"> {data.trips[0].modal.contentRight.extra}</p>
+              
+                      </div>
+                    </div>
+                    {/*footer*/}
+                  </div>
+
+                  <button className="px-8 py-2 mt-5">Tilmeld</button>
+
                 </div>
-                </div>
-           
-                
               </div>
             </div>
           </div>
