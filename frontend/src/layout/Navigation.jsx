@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { slide as Menu } from "react-burger-menu";
+import { fallDown as Menu } from "react-burger-menu";
 
 const Navigation = (props) => {
   const links = [
@@ -28,7 +28,7 @@ const Navigation = (props) => {
   return (
     // Pass on our props
     <div className="">
-      <Menu {...props}>
+      <Menu noTransition {...props}>
         {links.map((link) => (
           <NavLink
             className="my-auto hidden md-lg:block font-medium w-auto text-white text-base hover:text-primary"

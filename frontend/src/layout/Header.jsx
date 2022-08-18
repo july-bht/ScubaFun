@@ -29,7 +29,7 @@ const links = [
 
 const Header = () => {
   return (
-    <nav className="w-full flex justify-between px-4 py-8 mx-auto bg-black">
+    <nav className="w-full flex justify-between px-4 py-2 fixed z-50 mx-auto bg-black">
       <figure className="flex items-center hover:cursor-pointer">
         <Link to="/">
           <Logo />

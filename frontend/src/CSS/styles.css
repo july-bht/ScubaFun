@@ -1,14 +1,6 @@
-html,
-body {
-  margin: 0;
-}
 
-#App {
-  font-family: sans-serif;
 
-  /* Give app full page to work with */
-  height: 100vh;
-}
+
 
 #page-wrap {
   text-align: center;
@@ -41,12 +33,18 @@ body {
   width: 36px;
   height: 30px;
   left: 90%;
-  top: 48px;
+  top: 26px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .bm-burger-button {
-    left: 85%;
+    left: 88%;
+  }
+}
+
+@media (max-width: 450px) {
+  .bm-burger-button {
+    left: 83%;
   }
 }
 
@@ -69,7 +67,7 @@ body {
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   width: 57%;
-  top: 128px;
+  top: 80px;
   left: 62%;
 }
 
@@ -93,3 +91,7 @@ body {
 /* .bm-overlay {
   background: rgba(0, 0, 0, 0.055);
 } */
+
+button {
+  color: rgb(147 197 253 / var(--tw-text-opacity)) !important;
+}

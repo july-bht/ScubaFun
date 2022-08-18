@@ -5,7 +5,7 @@ import Card from "./components/TripCard";
 
 const Trips = () => {
   return (
-    <section className=" pt-24 text-center">
+    <section className=" pt-20 text-center">
       {/* slider */}
       <img className="h-96 w-screen bg-secondary" src="" alt="" />
 
