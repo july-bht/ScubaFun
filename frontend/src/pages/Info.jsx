@@ -23,7 +23,7 @@ const Info = () => {
     <section className="pt-20">
   
       <figure>
-        <img className="w-full h-3/5 sm:h-80" src={infoIMG} />
+        <img alt="" className="w-full object-cover h-3/5 sm:h-80" src={infoIMG} />
       </figure>
 
     <div className='text-center pt-12 mb-12'>
@@ -36,13 +36,13 @@ const Info = () => {
               <section className="grid lg:px-80 md:px-8">
               <div className="pb-4">
                 <div className="bg-secondary flex justify-between w-full text-center cursor-pointer" onClick={() => toggle(index)} key={index}>
-                  <p className="sm:text-1xl p-2 pl-4 font-bold text-xl text-black">{item.title}</p>
+                  <h4 className="sm:text-1xl p-2 pl-4 font-bold text-xl text-black">{item.title}</h4>
                   <span className="flex items-center">{clicked === index ? <FiMinus /> : <FiPlus />}</span>
                 </div>
                 {clicked === index ? (
                   <div className="bg-secondary border-t-2 w-full h-auto flex flex-col justify-center items-center">
                     <div className="py-1 px-2">
-                    <h4 className="text-black text-sm md:text-base pl-3">{item.text}</h4>
+                    <p className=" text-sm md:text-base pl-3">{item.text}</p>
                     </div>
                   </div>
                 ) : null}
