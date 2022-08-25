@@ -58,7 +58,7 @@ const Header = () => {
 
       {/* Ipad/Mobile Navigation */}
       <div className="md:hidden">
-        <Navigation pageWrapId={"page-wrap"} outerContainerId={"App"} />
+        <Navigation />
       </div>
       {/* Ipad/Mobile Navigation END */}
 

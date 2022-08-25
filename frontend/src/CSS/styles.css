@@ -67,8 +67,10 @@
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   width: 57%;
+  max-height: 350px !important;
   top: 80px;
   left: 62%;
+  transition: .5s;
 }
 
 @media (max-width: 400px) {
@@ -94,4 +96,9 @@
 
 button {
   color: rgb(147 197 253 / var(--tw-text-opacity)) !important;
+  transition: .3s !important;
+}
+
+button:hover {
+  color: white !important;
 }
