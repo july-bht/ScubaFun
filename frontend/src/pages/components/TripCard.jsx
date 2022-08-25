@@ -81,6 +81,9 @@ const Card = () => {
                     >
                      <AiOutlineClose className="" />
                     </button>
+
+        
+
                   </div>
                   {/*body*/}
                   <img className="w-full h-40 object-cover " src={data.trips[0].img} alt="" />
