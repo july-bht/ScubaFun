@@ -39,9 +39,7 @@ const Navigation = (props) => {
           </NavLink>
         ))}
 
-          <button className="px-4 py-1 transition duration-500">
-            Shoppen
-          </button>
+        <button className="px-4 py-1 transition duration-500">Shoppen</button>
       </Menu>
     </div>
   );

@@ -6,7 +6,7 @@ const SignUp = () => {
     <section className='p-12 pt-28'>
       <h3 className="title">Tilmelding</h3>
       <Line/>
-      <div className='flex gap-5 pt-5 px-32 flex-col md:flex-row'>
+      <div className='flex gap-5 pt-5 px-32 md:px-16 flex-col md:flex-row'>
 
         <div className="bg-secondary flex flex-col px-8 p-5 justify-between w-full text-center cursor-pointer">
            <p className="p-2 pl-4 font-bold text-2xl text-black grid justify-center">Praktisk Information</p>
@@ -25,7 +25,7 @@ const SignUp = () => {
           </div>
         </div>
 
-        <div className="bg-secondary flex flex-col px-8 p-5 justify-between w-full text-center cursor-pointer">
+        <div className="bg-secondary flex flex-col px-8 p-5 pt-8 justify-between w-full text-center cursor-pointer">
         <input className='p-1 bg-white text-black rounded' type="text" name="email" placeholder='Navn' />
         </div>
       </div>
