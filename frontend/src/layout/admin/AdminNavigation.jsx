@@ -33,9 +33,7 @@ const Header = () => {
             </NavLink>
           ))}
 
-          <button className="px-4 py-1 transition duration-500">
-           <Link to="admin">Shoppen</Link> 
-          </button>
+       
         </div>
       </div>
       {/* Desktop Navigation END */}
