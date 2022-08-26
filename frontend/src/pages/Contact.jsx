@@ -26,21 +26,21 @@ const Contact = () => {
       <p className='flex justify-start text-black pb-8'>contact@scubafun.dk</p>
 </div>
     {/* FORM */}
-    <div className='bg-secondary'>
+    <div className='bg-secondary rounded'>
       <form className='flex flex-col p-2'>
         <label className='flex text-black flex-col'>
           Fulde navn:
-          <input className='p-1 bg-white' type="text" name="name" />
+          <input className='p-1 bg-white rounded' type="text" name="name" required />
         </label>
         
         <label className='flex text-black flex-col'>
           Email:
-          <input className='p-1 bg-white' type="text" name="email" />
+          <input className='p-1 bg-white rounded' type="text" name="email" required />
         </label>
 
         <label className='flex text-black flex-col'>
           Besked:
-          <input className='h-12 md:h-16 lg:h-24 pl-1 bg-white' type="text" name="besked" />
+          <input className='h-12 md:h-16 lg:h-24 pl-1 bg-white rounded' type="text" name="besked" required />
         </label>
       </form>
     </div>
@@ -74,4 +74,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contact;

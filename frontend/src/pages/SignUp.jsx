@@ -31,7 +31,7 @@ const SignUp = () => {
       </div>
 
       <div className='flex justify-center pt-12'>
-      <button className='mr-4 h-8 transition duration-500'>Send Tilmedlign</button>
+      <button className='mr-4 h-8 transition duration-500'>Send Tilmelding</button>
       </div>
     </section>
   )
