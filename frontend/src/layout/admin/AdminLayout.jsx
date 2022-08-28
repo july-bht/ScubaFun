@@ -1,4 +1,4 @@
-import Header from "../Header";
+import Header from "./AdminNavigation";
 import React from "react";
 
 const AdminLayout = () => {

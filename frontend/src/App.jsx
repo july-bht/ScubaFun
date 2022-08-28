@@ -33,6 +33,8 @@ function App() {
             <Route index element={<AdminHome />} />
           </Route>
 
+          <Route path="/test" element={<AdminHome />} />
+
           {/* Shop */}
 
         </Routes>
