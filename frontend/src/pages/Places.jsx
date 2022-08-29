@@ -12,7 +12,7 @@ const Places = () => {
       <div>
       <PlacesAside />
       <figure className='shadow-lg'>
-        <img src={MAP} className="w-full h-80" alt="MAP" />
+        <img src={MAP} className="w-full object-cover h-80" alt="MAP" />
       </figure>
       </div>
       {/* map  */}

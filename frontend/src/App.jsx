@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import SignUp from "./pages/SignUp";
 
 import AdminHome from "./pages/admin/AdminHome";
+import AdminHomepage from "./layout/admin/AdminHomepage";
 
 function App() {
   return (
@@ -31,6 +32,11 @@ function App() {
           {/* ADMIN-routes  */}
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<AdminHome />} />
+            {/* <Route path="/adminHomepage" element={<AdminHomepage />} /> */}
+          </Route>
+
+          <Route path="/adminHomepage" element={<AdminHomepage />}>
+            <Route index element={<AdminHomepage />} />
           </Route>
 
           {/* Shop */}

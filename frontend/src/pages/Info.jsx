@@ -37,7 +37,7 @@ const Info = () => {
               <div className="pb-4">
                 <div className="bg-secondary flex justify-between w-full text-center cursor-pointer" onClick={() => toggle(index)} key={index}>
                   <h4 className="sm:text-1xl p-2 pl-4 font-bold text-xl text-black">{item.title}</h4>
-                  <span className="flex items-center">{clicked === index ? <FiMinus /> : <FiPlus />}</span>
+                  <span className="flex items-center pr-4">{clicked === index ? <FiMinus /> : <FiPlus />}</span>
                 </div>
                 {clicked === index ? (
                   <div className="bg-secondary border-t-2 w-full h-auto flex flex-col justify-center items-center">
