@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { tur } from "../../api/API";
+import { tur, sted } from "../../api/API";
 
 const AddTurModal = (props) => {
+    const [steder, setSteder] = useState([]);
+
     const [stedValue, setStedValue] = useState(null);
     const [navnValue, setNavnValue] = useState(null);
     const [datoValue, setDatoValue] = useState(null);
@@ -24,10 +26,25 @@ const AddTurModal = (props) => {
                 rabat: 0,
             });
             props.onClose();
+            props.update();
         } catch (e) {
             throw new Error(e);
         }
     };
+
+    const getData = async () => {
+        try {
+            const newSteder = await sted.get();
+            setSteder(newSteder.data);
+        } catch (e) {
+            throw new Error(e);
+        }
+    };
+
+    useEffect(() => {
+        getData();
+    }, []);
+
     return (
         <div
             className={`fixed top-0 left-0 w-screen h-screen bg-black/25 z-10 grid place-items-center ${
@@ -49,8 +66,11 @@ const AddTurModal = (props) => {
                             required
                             onChange={(e) => setStedValue(e.target.value)}
                         >
-                            <option value="1">Test</option>
-                            <option value="2">LMao</option>
+                            {steder.map((sted, index) => (
+                                <option key={index} value={sted.id}>
+                                    {sted.id} - {sted.navn}
+                                </option>
+                            ))}
                         </select>
                         {stedValue}
                     </div>

@@ -112,5 +112,19 @@ export const sted = {
         } catch (e) {
             throw new Error(e);
         }
+    },
+    post: async (data) => {
+        try {
+            await axios.post(MadeAPI.baseUrl + MadeAPI.endPoint, {
+                typeID: data.typeID,
+                lat: data.lat,
+                lon: data.lng,
+                navn: data.navn,
+                dybde: data.dybde,
+                content: data.content,
+            })
+        } catch (e) {
+            throw new Error(e);
+        }
     }
-}
+};

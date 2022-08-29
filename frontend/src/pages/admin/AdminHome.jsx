@@ -2,20 +2,22 @@ import React from "react";
 import axios from "axios";
 import Card from "./Card";
 import sampleImage from "../../images/IMG-1.jpg";
-import { tur } from "../../api/API";
+import { tur, sted } from "../../api/API";
 import AddTurModal from "./AddTur";
+import AddStedModal from "./addSted";
 
 const AdminHome = () => {
     const [ture, setTure] = React.useState([]);
+    const [steder, setSteder] = React.useState([]);
     const [addTurModal, setAddTurModal] = React.useState(false);
+    const [addStedModal, setAddStedModal] = React.useState(true);
 
     const getData = async () => {
         const newTure = await tur.get();
         setTure(newTure.data);
 
-        // EKSEMPEL:
-        // const newTur = await getTur();
-        // setTur(newTur.data)
+        const newSteder = await sted.get();
+        setSteder(newSteder.data);
     };
 
     React.useEffect(() => {
@@ -27,6 +29,12 @@ const AdminHome = () => {
             <AddTurModal
                 opened={addTurModal}
                 onClose={() => setAddTurModal(false)}
+                update={async () => await getData()}
+            />
+            <AddStedModal
+                opened={addStedModal}
+                onClose={() => setAddStedModal(false)}
+                update={async () => await getData()}
             />
             <div className="flex gap-20 justify-center px-20">
                 {/* dykker ture */}
@@ -35,7 +43,7 @@ const AdminHome = () => {
                     <div className="flex justify-between pb-5">
                         <h4>Dykker Ture</h4>
                         <div
-                            className="admin-add"
+                            className="admin-add cursor-pointer"
                             onClick={() => setAddTurModal(true)}
                         >
                             +
@@ -70,11 +78,31 @@ const AdminHome = () => {
                     {/* object header */}
                     <div className="flex justify-between pb-5">
                         <h4>Steder</h4>
-                        <div className="admin-add">+</div>
+                        <div
+                            className="admin-add cursor-pointer"
+                            onClick={() => setAddStedModal(true)}
+                        >
+                            +
+                        </div>
                     </div>
 
                     {/* object body */}
-                    <div className="border-secondary bg-white p-5"></div>
+                    <div
+                        className="border-secondary bg-white p-5"
+                        style={{ overflowY: "scroll", maxHeight: "90vh" }}
+                    >
+                        {steder.map((sted, index) => (
+                            <div className="mb-5">
+                                <p>ID: {sted.id}</p>
+                                <p>Type: {sted.typeID}</p>
+                                <p>lat: {sted.lat}</p>
+                                <p>lng: {sted.lon}</p>
+                                <p>Navn: {sted.navn}</p>
+                                <p>Dybde: {sted.dybde}</p>
+                                <p>Content: {sted.content}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
 
