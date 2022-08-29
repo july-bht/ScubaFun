@@ -65,3 +65,7 @@ button {
   @apply bg-white;
 }
 
+.admin-add{
+  @apply bg-primary rounded-full px-3 py-1 text-white;
+}
+
