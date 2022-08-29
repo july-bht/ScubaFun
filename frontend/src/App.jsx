@@ -8,12 +8,14 @@ import Trips from "./pages/Trips";
 import Places from "./pages/Places";
 import Info from "./pages/Info";
 import Contact from "./pages/Contact";
+import SignUp from "./pages/SignUp";
 
 import AdminHome from "./pages/admin/AdminHome";
+import AdminHomepage from "./layout/admin/AdminHomepage";
 
 function App() {
   return (
-    <div className="App">
+    <div className="w-screen overflow-hidden relative">
       <Router>
 
         {/* Public */}
@@ -24,12 +26,20 @@ function App() {
             <Route path="places" element={<Places />} />
             <Route path="info" element={<Info />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="signUp" element={<SignUp />} />
           </Route>
 
           {/* ADMIN-routes  */}
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<AdminHome />} />
+            {/* <Route path="/adminHomepage" element={<AdminHomepage />} /> */}
           </Route>
+
+          <Route path="/adminHomepage" element={<AdminHomepage />}>
+            <Route index element={<AdminHomepage />} />
+          </Route>
+
+          <Route path="/test" element={<AdminHome />} />
 
           {/* Shop */}
 

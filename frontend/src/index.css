@@ -7,12 +7,27 @@ body {
   @apply bg-background w-screen ;
 }
 section{
-  @apply pt-32 w-screen;
+  @apply  w-screen;
 }
 
 p {
-  @apply text-text;
+  @apply text-text text-sm md:text-base;
 }
+
+li{
+  @apply text-sm md:text-base;
+}
+
+/* mobile scroll */
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+/*  */
+
 /* button */
 button {
   @apply border border-primary text-primary py-0 px-6 uppercase
@@ -49,3 +64,8 @@ button {
 .scrolled{
   @apply bg-white;
 }
+
+.admin-add{
+  @apply bg-primary rounded-full px-3 py-1 text-white;
+}
+
