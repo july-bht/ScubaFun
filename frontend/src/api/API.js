@@ -75,3 +75,42 @@ export const hentAboutus = () => {
     return response
 
  } 
+
+export const tur = {
+    get: async (id) => {
+        try {
+            const res = await axios.get(MadeAPI.baseUrl + MadeAPI.endPoint4);
+            return res;
+        } catch (e) {
+            throw new Error(e);
+        }
+    },
+    post: async (data) => {
+        try {
+            await axios.post(MadeAPI.baseUrl + MadeAPI.endPoint4, {
+                stedID: data.stedID,
+                navn: data.navn,
+                dato: data.dato,
+                tid: data.tid,
+                beskrivelse: data.beskrivelse,
+                pladser: data.pladser,
+                tilmeldte: data.tilmeldte,
+                pris: data.pris,
+                rabat: data.rabat,
+            });
+        } catch (e) {
+            throw new Error(e);
+        }
+    }
+}
+
+export const sted = {
+    get: async (id) => {
+        try {
+            const res = await axios.get(`${MadeAPI.baseUrl}${MadeAPI.endPoint}${id ? `/${id}` : ''}`);
+            return res;
+        } catch (e) {
+            throw new Error(e);
+        }
+    }
+}
