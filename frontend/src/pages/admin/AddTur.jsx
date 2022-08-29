@@ -72,7 +72,6 @@ const AddTurModal = (props) => {
                                 </option>
                             ))}
                         </select>
-                        {stedValue}
                     </div>
 
                     <div className="field">
@@ -84,7 +83,6 @@ const AddTurModal = (props) => {
                             required
                             onChange={(e) => setNavnValue(e.target.value)}
                         />
-                        {navnValue}
                     </div>
 
                     <div className="field">
@@ -95,7 +93,6 @@ const AddTurModal = (props) => {
                             required
                             onChange={(e) => setDatoValue(e.target.value)}
                         />
-                        {datoValue}
                     </div>
 
                     <div className="field">
@@ -106,7 +103,6 @@ const AddTurModal = (props) => {
                             required
                             onChange={(e) => setTidValue(e.target.value)}
                         />
-                        {tidValue}
                     </div>
 
                     <div className="field">
@@ -117,7 +113,6 @@ const AddTurModal = (props) => {
                             required
                             onChange={(e) => setDescValue(e.target.value)}
                         />
-                        {descValue}
                     </div>
 
                     <div className="field">
@@ -129,7 +124,6 @@ const AddTurModal = (props) => {
                             required
                             onChange={(e) => setPrisValue(e.target.value)}
                         />
-                        {prisValue}
                     </div>
 
                     <button type="submit">Submit</button>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import sampleImage from "../../images/IMG-1.jpg";
-import { sted } from "../../api/API";
+import { sted, tur } from "../../api/API";
+import { BsTrash } from "react-icons/bs";
 
 const Card = (props) => {
     const [placeName, setPlaceName] = useState("");
@@ -10,6 +11,16 @@ const Card = (props) => {
         setPlaceName(newPlace.data.navn);
     };
 
+    const deleteTur = async () => {
+        console.log("delete");
+        try {
+            await tur.delete(props.id);
+            props.update();
+        } catch (e) {
+            throw new Error(e);
+        }
+    };
+
     useEffect(() => {
         getData();
     }, []);
@@ -17,6 +28,9 @@ const Card = (props) => {
     return (
         <div type="button" className="w-max mx-auto">
             <div className="rounded-md flex h-32 mx-auto hover:shadow-lg hover:text-black ">
+                <button onClick={async () => await deleteTur()}>
+                    <BsTrash />
+                </button>
                 <div className="my-auto px-12    font-thin">
                     <p>{props.date}</p>
                     <p>{props.time}</p>

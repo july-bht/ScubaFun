@@ -5,12 +5,22 @@ import sampleImage from "../../images/IMG-1.jpg";
 import { tur, sted } from "../../api/API";
 import AddTurModal from "./AddTur";
 import AddStedModal from "./addSted";
+import { BsTrash } from "react-icons/bs";
 
 const AdminHome = () => {
     const [ture, setTure] = React.useState([]);
     const [steder, setSteder] = React.useState([]);
     const [addTurModal, setAddTurModal] = React.useState(false);
     const [addStedModal, setAddStedModal] = React.useState(true);
+
+    const deleteSted = async (id) => {
+        try {
+            await sted.delete(id);
+            getData();
+        } catch (e) {
+            throw new Error(e);
+        }
+    };
 
     const getData = async () => {
         const newTure = await tur.get();
@@ -63,11 +73,14 @@ const AdminHome = () => {
                         {ture.map((tur, index) => (
                             <Card
                                 key={index}
+                                id={tur.id}
                                 date={tur.dato}
                                 time={tur.tid}
                                 title={tur.navn}
                                 price={tur.pris}
                                 place={tur.stedID}
+                                delete
+                                update={async () => await getData()}
                             />
                         ))}
                     </div>
@@ -93,6 +106,13 @@ const AdminHome = () => {
                     >
                         {steder.map((sted, index) => (
                             <div className="mb-5">
+                                <button>
+                                    <BsTrash
+                                        onClick={async () =>
+                                            deleteSted(sted.id)
+                                        }
+                                    />
+                                </button>
                                 <p>ID: {sted.id}</p>
                                 <p>Type: {sted.typeID}</p>
                                 <p>lat: {sted.lat}</p>

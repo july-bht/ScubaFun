@@ -1,5 +1,5 @@
 import React from "react";
-import { sted } from "../../api/API";
+import { sted, type } from "../../api/API";
 
 const AddStedModal = (props) => {
     const [typeValue, setTypeValue] = React.useState("");
@@ -8,6 +8,8 @@ const AddStedModal = (props) => {
     const [navnValue, setNavnValue] = React.useState("");
     const [dybdeValue, setDybdeValue] = React.useState("");
     const [descValue, setDescValue] = React.useState("");
+
+    const [types, setTypes] = React.useState([]);
 
     const addSted = async (e) => {
         e.preventDefault();
@@ -26,6 +28,19 @@ const AddStedModal = (props) => {
             throw new Error(e);
         }
     };
+
+    const getData = async () => {
+        try {
+            const newTypes = await type.get();
+            setTypes(newTypes.data);
+        } catch (e) {
+            throw new Error(e);
+        }
+    };
+
+    React.useState(() => {
+        getData();
+    }, []);
 
     return (
         <div
@@ -48,9 +63,11 @@ const AddStedModal = (props) => {
                             required
                             onChange={(e) => setTypeValue(e.target.value)}
                         >
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
+                            {types.map((type, index) => (
+                                <option key={index} value={type.id}>
+                                    {type.id} - {type.dykType}
+                                </option>
+                            ))}
                         </select>
                         {/* {stedValue} */}
                     </div>

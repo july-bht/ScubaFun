@@ -1,85 +1,17 @@
 import axios from "axios";
 
-const MadeAPI = {
-    baseUrl: "https://praktisk-web.herokuapp.com/api",
-    endPoint: "/sted",
-    endPoint2: "/type",
-    endPoint3: "/img",
-    endPoint4: "/tur",
+const API = {
+    BASE_URL: "https://praktisk-web.herokuapp.com/api",
+    STED_ENDPOINT: "/sted",
+    TYPE_ENDPOINT: "/type",
+    IMG_ENDPOINT: "/img",
+    TUR_ENDPOINT: "/tur",
 }
-
-export const hentToast = () => {
-
-    let response = axios.get(MadeAPI.baseUrl + MadeAPI.endPoint, { 
-    
-    })
-    .then(res => { 
-        return res.data 
-    })
-    .catch(error => { 
-        console.log('FEJL', error)
-        throw new Error("Desværre Fejl")
-    })
-
-    return response
-
- }
-
-export const hentReviews = () => {
-
-    let response = axios.get(MadeAPI.baseUrl + MadeAPI.endPoint2, { 
-    
-    })
-    .then(res => { 
-        return res.data 
-    })
-    .catch(error => { 
-        console.log('FEJL', error)
-        throw new Error("Desværre Fejl")
-    })
-
-    return response
-
- }
-
- export const hentService = () => {
-
-    let response = axios.get(MadeAPI.baseUrl + MadeAPI.endPoint4, { 
-    
-    })
-    .then(res => { 
-        return res.data 
-    })
-    .catch(error => { 
-        console.log('FEJL', error)
-        throw new Error("Desværre Fejl")
-    })
-
-    return response
-
- }
-
-export const hentAboutus = () => {
-
-    let response = axios.get(MadeAPI.baseUrl + MadeAPI.endPoint3, { 
-    
-    })
-    .then(res => { 
-        return res.data 
-    })
-    .catch(error => { 
-        console.log('FEJL', error)
-        throw new Error("Desværre Fejl")
-    })
-
-    return response
-
- } 
 
 export const tur = {
     get: async (id) => {
         try {
-            const res = await axios.get(MadeAPI.baseUrl + MadeAPI.endPoint4);
+            const res = await axios.get(API.BASE_URL + API.TUR_ENDPOINT);
             return res;
         } catch (e) {
             throw new Error(e);
@@ -87,7 +19,7 @@ export const tur = {
     },
     post: async (data) => {
         try {
-            await axios.post(MadeAPI.baseUrl + MadeAPI.endPoint4, {
+            await axios.post(API.BASE_URL + API.TUR_ENDPOINT, {
                 stedID: data.stedID,
                 navn: data.navn,
                 dato: data.dato,
@@ -101,13 +33,20 @@ export const tur = {
         } catch (e) {
             throw new Error(e);
         }
+    },
+    delete: async (id) => {
+        try {
+            await axios.delete(API.BASE_URL + API.TUR_ENDPOINT + "/" + id);
+        } catch (e) {
+            throw new Error(e);
+        }
     }
 }
 
 export const sted = {
     get: async (id) => {
         try {
-            const res = await axios.get(`${MadeAPI.baseUrl}${MadeAPI.endPoint}${id ? `/${id}` : ''}`);
+            const res = await axios.get(`${API.BASE_URL}${API.STED_ENDPOINT}${id ? `/${id}` : ''}`);
             return res;
         } catch (e) {
             throw new Error(e);
@@ -115,7 +54,7 @@ export const sted = {
     },
     post: async (data) => {
         try {
-            await axios.post(MadeAPI.baseUrl + MadeAPI.endPoint, {
+            await axios.post(API.BASE_URL + API.STED_ENDPOINT, {
                 typeID: data.typeID,
                 lat: data.lat,
                 lon: data.lng,
@@ -126,5 +65,32 @@ export const sted = {
         } catch (e) {
             throw new Error(e);
         }
+    },
+    delete: async (id) => {
+        try {
+            await axios.delete(`${API.BASE_URL}${API.STED_ENDPOINT}/${id}`);
+        } catch (e) {
+            throw new Error(e);
+        }
     }
 };
+
+export const type = {
+    get: async (id) => {
+        try {
+            const res = await axios.get(`${API.BASE_URL}${API.TYPE_ENDPOINT}${id ? `/${id}` : ''}`);
+            return res;
+        } catch (e) {
+            throw new Error(e);
+        }
+    },
+    post: async (data) => {
+        try {
+            await axios.post(API.BASE_URL + API.TYPE_ENDPOINT, {
+                type: data.type,
+            })
+        } catch (e) {
+            throw new Error(e);
+        }
+    },
+}
