@@ -149,9 +149,8 @@ const Contact = () => {
 
 
 
-        <figure className='mapContainer shadow-lg'>
-          <div id='kortdiv' style={{width: "500px", height: "300px", backgroundColor: "silver"}}></div>
-          {/* <img className='w-full h-full' src={MAP} alt="MAP" /> */}
+        <figure className='mapContainer shadow-lg z-0'>
+          <div className='z-0' id='kortdiv' style={{width: "500px", height: "300px", backgroundColor: "silver"}}></div>
         </figure>
 
 
