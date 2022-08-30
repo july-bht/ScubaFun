@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Line from "../components/Line";
 import data from "../assets/data.json";
 import MAP from '../images/maps-google.png'
@@ -42,6 +42,7 @@ const Places = () => {
             </div>
           </div>
         ))}
+       
       </div>
     </section>
   );

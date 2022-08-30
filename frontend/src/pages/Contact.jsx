@@ -1,6 +1,5 @@
 import React from 'react'
 import Line from "../components/Line";
-import { NavLink } from 'react-router-dom'
 import MAP from '../images/maps-google.png'
 
 const Contact = () => {
@@ -46,7 +45,7 @@ const Contact = () => {
     </div>
 
       <div className='flex justify-center pt-3'>
-        <NavLink path to="/signUp"><button className='mr-4 h-8 transition duration-500'>Send</button></NavLink>
+        <button className='mr-4 h-8 transition duration-500'>Send</button>
       </div>
     {/* FORM END*/}
 
