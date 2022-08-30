@@ -33,7 +33,7 @@ function App() {
           {/* ADMIN-routes  */}
           <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<AdminLogin />} />
-            <Route path="/adminHome" element={<AdminHome />} />
+            <Route path="/adminHomepage" element={<AdminHomepage />} />
           </Route>
 
       
