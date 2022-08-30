@@ -1,8 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Line from "../components/Line";
 import { NavLink } from 'react-router-dom';
 import MAP from '../images/maps-google.png';
 import emailjs from '@emailjs/browser';
+import { lavKort } from '../helpers/leaflet';
 
 
 const Contact = () => {
@@ -19,6 +20,34 @@ const Contact = () => {
           console.log(error.text);
       });
   };
+
+
+  //STATE - til data - loading og fejl
+  const [map, setMap] = useState(); //data fra api
+  const [loading, setLoading] = useState(false);
+  const [fejl, setFejl] = useState(false);
+
+
+  //Kald api/webservice/dataservice, når "react" er klar
+  useEffect( () => {
+
+    async function hentData() {
+
+      setLoading( true )
+
+      try {
+        //vis kort, når data er klar
+        lavKort();
+      } catch ( error ) {
+        console.log(error)
+        setFejl(true)
+        setMap()
+      } finally {
+        setLoading( false )
+      }
+    }
+    hentData(); //kald funktionen som kalder data
+  }, [] );
 
 
 
@@ -115,9 +144,25 @@ const Contact = () => {
         {/* RIGHT-SIDE */}
         <div className='p-5'>
 
-        <figure className='shadow-lg'>
-          <img className='w-full h-full' src={MAP} alt="MAP" />
+
+
+
+
+
+        <figure className='mapContainer shadow-lg'>
+          <div id='kortdiv' style={{width: "500px", height: "300px", backgroundColor: "silver"}}></div>
+          {/* <img className='w-full h-full' src={MAP} alt="MAP" /> */}
         </figure>
+
+
+
+        <div className='mapContainer'>
+        </div>
+
+
+
+
+
 
           <p className='font-bold text-lg text-black'>Lager adresse</p>
           <p className='text-black'>Svinget 2, 8570 Trustrup, Lyngby</p>
