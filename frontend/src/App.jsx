@@ -12,6 +12,7 @@ import SignUp from "./pages/SignUp";
 
 import AdminHome from "./pages/admin/AdminHome";
 import AdminHomepage from "./layout/admin/AdminHomepage";
+import AdminLogin from "./layout/admin/AdminLogin";
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
 
           {/* ADMIN-routes  */}
           <Route path="/admin" element={<AdminLayout />}>
-          {/* <Route index element={<AdminLogin />} /> */}
+          <Route index element={<AdminLogin />} />
             <Route path="/adminHomepage" element={<AdminHomepage />} />
           </Route>
 
