@@ -18,7 +18,6 @@ function App() {
   return (
     <div className="w-screen overflow-hidden relative">
       <Router>
-
         {/* Public */}
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -32,19 +31,14 @@ function App() {
 
           {/* ADMIN-routes  */}
           <Route path="/admin" element={<AdminLayout />}>
-          <Route index element={<AdminLogin />} />
+            <Route index element={<AdminLogin />} />
             <Route path="/adminHome" element={<AdminHome />} />
           </Route>
 
-      
-
-       
-
           {/* Shop */}
-
         </Routes>
       </Router>
-    </div >
+    </div>
   );
 }
 
