@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import Header from "./AdminNavigation";
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
@@ -13,6 +14,45 @@ const AdminLayout = () => {
           <div className="flex gap-2 justify-center">
             <p className="text-white text-4xl sm:text-6xl">ADMIN PAGE</p>
           </div>
+=======
+<<<<<<< Updated upstream
+import React from 'react'
+
+const AdminLayout = () => {
+  return (
+    <div>AdminLayout</div>
+  )
+=======
+import Header from "./AdminNavigation";
+
+
+import React, { useContext } from 'react'
+import { Outlet, Navigate } from 'react-router-dom'
+import { LoginContext } from '../../context/LoginContext';
+
+// components
+
+
+// css
+
+
+
+const AdminLayout = ( { children } ) => {
+
+
+    return (
+        <div>
+
+            <Header />
+
+            <main>
+                <Outlet />
+            </main>
+        </div>
+    )
+>>>>>>> Stashed changes
+}
+>>>>>>> Stashed changes
 
           {/* FORM */}
           <section className="flex justify-center pt-12">

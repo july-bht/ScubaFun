@@ -28,6 +28,25 @@ const links = [
 ];
 
 const Header = () => {
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+    return (
+        <header id='header'>
+            <div className=' z-10 flex justify-between w-screen p-5 fixed'>
+                <figure>
+                    <Logo />
+                </figure>
+                <div className='flex gap-20'>
+                    <Navigation />
+                    <button>Shoppen</button>
+                </div>
+            </div>
+        </header>
+    )
+}
+=======
+>>>>>>> Stashed changes
   return (
     <nav className="w-full flex justify-between px-4 py-2 fixed z-50 mx-auto bg-black">
       <figure className="flex items-center hover:cursor-pointer">
@@ -50,7 +69,11 @@ const Header = () => {
           ))}
 
           <button className="px-4 py-1 transition duration-500">
+<<<<<<< Updated upstream
            <Link to="/admin">Shoppen</Link> 
+=======
+         Shoppen
+>>>>>>> Stashed changes
           </button>
         </div>
       </div>
@@ -65,5 +88,9 @@ const Header = () => {
     </nav>
   );
 };
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
 export default Header;

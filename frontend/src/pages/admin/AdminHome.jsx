@@ -1,7 +1,18 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+import React from 'react'
+=======
+>>>>>>> Stashed changes
 import React from "react";
 import axios from "axios";
 import { GetPlaces } from "../../helpers/API";
 import Card from "../components/TripCard";
+<<<<<<< Updated upstream
+=======
+import Layout from "../../layout/admin/AdminLayout";
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
 const AdminHome = () => {
   const [steder, setSteder] = React.useState([]);
@@ -20,6 +31,15 @@ const AdminHome = () => {
   }, []);
 
   return (
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+    <div>AdminHome</div>
+  )
+}
+=======
+
+>>>>>>> Stashed changes
     <div className="w-screen h-screen pt-5">
       <div className="flex gap-20 justify-center px-20">
 
@@ -61,7 +81,14 @@ const AdminHome = () => {
         <p key={index}>{sted.id} - {sted.navn}</p>
       ))} */}
     </div>
+<<<<<<< Updated upstream
   );
 };
+=======
+  
+  );
+};
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
 export default AdminHome;

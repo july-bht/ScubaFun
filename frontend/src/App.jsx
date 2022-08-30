@@ -11,13 +11,16 @@ import Contact from "./pages/Contact";
 import SignUp from "./pages/SignUp";
 
 import AdminHome from "./pages/admin/AdminHome";
+<<<<<<< Updated upstream
 import AdminHomepage from "./layout/admin/AdminHomepage";
+=======
+import AdminLogin from "./layout/admin/AdminLogin";
+>>>>>>> Stashed changes
 
 function App() {
   return (
     <div className="w-screen overflow-hidden relative">
       <Router>
-
         {/* Public */}
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -31,6 +34,7 @@ function App() {
 
           {/* ADMIN-routes  */}
           <Route path="/admin" element={<AdminLayout />}>
+<<<<<<< Updated upstream
             <Route index element={<AdminHome />} />
             {/* <Route path="/adminHomepage" element={<AdminHomepage />} /> */}
           </Route>
@@ -42,10 +46,22 @@ function App() {
           <Route path="/test" element={<AdminHome />} />
 
           {/* Shop */}
+=======
+            <Route index element={<AdminLogin />} />
+            <Route path="adminHome" element={<AdminHome />} />
+          
+          </Route>
 
+<<<<<<< Updated upstream
+=======
+          {/* <Route path="/test" element={<AdminHome />} /> */}
+>>>>>>> Stashed changes
+
+>>>>>>> Stashed changes
+          {/* Shop */}
         </Routes>
       </Router>
-    </div >
+    </div>
   );
 }
 
