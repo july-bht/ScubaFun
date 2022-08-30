@@ -31,15 +31,13 @@ function App() {
 
           {/* ADMIN-routes  */}
           <Route path="/admin" element={<AdminLayout />}>
-            <Route index element={<AdminHome />} />
-            {/* <Route path="/adminHomepage" element={<AdminHomepage />} /> */}
+          {/* <Route index element={<AdminLogin />} /> */}
+            <Route path="/adminHomepage" element={<AdminHomepage />} />
           </Route>
 
-          <Route path="/adminHomepage" element={<AdminHomepage />}>
-            <Route index element={<AdminHomepage />} />
-          </Route>
+      
 
-          <Route path="/test" element={<AdminHome />} />
+       
 
           {/* Shop */}
 
