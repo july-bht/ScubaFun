@@ -1,10 +1,10 @@
 import React from "react";
 import axios from "axios";
-import Card from "./Card";
+import Card from "../../pages/admin/Card";
 import sampleImage from "../../images/IMG-1.jpg";
 import { tur, sted } from "../../api/API";
-import AddTurModal from "./AddTur";
-import AddStedModal from "./AddSted";
+import AddTurModal from "../../pages/admin/AddTur";
+import AddStedModal from "../../pages/admin/AddSted";
 import { BsTrash } from "react-icons/bs";
 
 const AdminHome = () => {
