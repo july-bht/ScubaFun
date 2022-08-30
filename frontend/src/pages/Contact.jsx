@@ -122,6 +122,8 @@ const Contact = () => {
           <p className='font-bold text-lg text-black'>Lager adresse</p>
           <p className='text-black'>Svinget 2, 8570 Trustrup, Lyngby</p>
 
+          {/*56.36840614366134, 10.747420628835362 - lat lon til Svinget 2, Trustrup*/} 
+
         </div>
         {/* RIGHT-SIDE END */}
 
