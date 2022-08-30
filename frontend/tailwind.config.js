@@ -13,10 +13,31 @@ module.exports = {
       secondary: '#E8E6E5',
       background: '#F5F5F5',
       text: '#747373',
-      title: colors.black,
+      title: '#151515',
     },
     fontFamily: {},
     extend: {},
+
+    screens: {
+
+      'md-lg': '900px',
+
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    }
+
   },
   plugins: [],
 }
