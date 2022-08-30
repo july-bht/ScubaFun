@@ -29,7 +29,7 @@ li{
 /*  */
 
 /* button */
-button {
+.btn {
   @apply border border-primary text-primary py-0 px-6 uppercase
   hover:bg-primary hover:text-white;
 }

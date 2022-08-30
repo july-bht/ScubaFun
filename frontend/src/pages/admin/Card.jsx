@@ -26,17 +26,15 @@ const Card = (props) => {
     }, []);
 
     return (
-        <div type="button" className="w-max mx-auto">
+        <div type="button" className="w-max min-w-full mx-auto">
             <div className="rounded-md flex h-32 mx-auto hover:shadow-lg hover:text-black ">
-                <button onClick={async () => await deleteTur()}>
-                    <BsTrash />
-                </button>
-                <div className="my-auto px-12    font-thin">
+              
+                <div className="my-auto text-center pr-5   font-thin">
                     <p>{props.date}</p>
                     <p>{props.time}</p>
                 </div>
 
-                <div className="relative bg-secondary grid grid-cols-1 place-items-center content-center px-8 ">
+                <div className="w-64 bg-secondary grid grid-cols-1 place-items-center content-center px-4 ">
                     <h5 className="small-title">{props.title}</h5>
                     <p
                         className="cursor-pointer hover:text-secondary"
@@ -50,23 +48,26 @@ const Card = (props) => {
                 <div className="bg-primary h-32  w-10 grid grid-cols-1 place-items-center content-center">
                     <div className="rotate-90  w-max">
                         <span className=" text-white font-medium ">
-                            {props.price} dk
+                            {props.price} Kr
                         </span>
                     </div>
                 </div>
 
                 {/* image */}
-                <figure className="rounded">
+                <figure className="">
                     <img
-                        className="h-3/4 w-48 rounded-md"
+                        className="h-3/4 w-48"
                         src={sampleImage}
-                        alt="This is a sample image"
+                        alt="This is a sample "
                     />
                     <figcaption className=" h-1/4 bg-black text-white p-1">
                         {placeName}
                     </figcaption>
                 </figure>
             </div>
+            <button className="" onClick={async () => await deleteTur()}>
+                    <BsTrash />
+                </button>
         </div>
     );
 };
