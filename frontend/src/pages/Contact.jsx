@@ -124,44 +124,12 @@ const Contact = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         {/* RIGHT-SIDE */}
         <div className='p-5'>
 
-
-
-
-
-
-        <figure className='mapContainer shadow-lg z-0'>
-          <div className='z-0' id='kortdiv' style={{width: "500px", height: "300px", backgroundColor: "silver"}}></div>
-        </figure>
-
-
-
-        <div className='mapContainer'>
-        </div>
-
-
-
-
-
+          <figure className='mapContainer shadow-lg z-0'>
+            <div className='z-0' id='kortdiv' style={{width: "500px", height: "300px", backgroundColor: "silver"}}></div>
+          </figure>
 
           <p className='font-bold text-lg text-black'>Lager adresse</p>
           <p className='text-black'>Svinget 2, 8570 Trustrup, Lyngby</p>
