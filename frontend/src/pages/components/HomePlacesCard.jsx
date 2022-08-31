@@ -1,4 +1,8 @@
 import React from 'react'
+import img1 from "../../images/IMG-3.jpg"
+import img5 from "../../images/IMG-5.jpg"
+import img7 from "../../images/IMG-7.jpg"
+import img9 from "../../images/IMG-9.jpg"
 
 const PlacesCard = () => {
   return (
@@ -9,14 +13,17 @@ const PlacesCard = () => {
     </h1>
     <div className="flex snap-mandatory snap-x overflow-x-scroll pb-32 hide-scroll-bar">
       <div className="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
-        <div className="inline-block px-3 snap-center">
-          <div className="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"></div>
+      <div className="inline-block px-3 snap-center">
+          <img src={img5} alt="" className="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out"/>
         </div>
         <div className="inline-block px-3 snap-center">
-          <div className="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"></div>
+          <img src={img1} alt="" className="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out"/>
         </div>
         <div className="inline-block px-3 snap-center">
-          <div className="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"></div>
+          <img src={img9} alt="" className="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out"/>
+        </div>
+        <div className="inline-block px-3 snap-center">
+          <img src={img7} alt="" className="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md  hover:shadow-xl transition-shadow duration-300 ease-in-out"/>
         </div>
       </div>
     </div>

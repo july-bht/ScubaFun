@@ -1,5 +1,6 @@
 import React from 'react'
 import Line from '../../components/Line'
+import img from "../../images/IMG_.jpg"
 
 const Info = () => {
   return (
@@ -14,7 +15,7 @@ const Info = () => {
     "
     >
       <figure className="h-full w-full bg-white">
-        <img src="" alt="" />
+        <img className='object-cover h-full w-full ' src={img} alt="" />
       </figure>
       <div className="my-auto">
         <h3 className="title">Lorem ibsum</h3>
