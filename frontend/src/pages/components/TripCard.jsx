@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import data from "../../assets/data.json";
 import {AiOutlineClose} from "react-icons/ai"
+import { NavLink } from 'react-router-dom'
   
 const ReadMore = ({ children }) => {
   const text = children;
@@ -30,13 +31,13 @@ const Card = () => {
           className="w-max mx-auto"
           key={key}
         >
-          <div className="rounded-md flex h-32 mx-auto hover:shadow-lg hover:text-black ">
-            <div className="my-auto px-12    font-thin">
+          <div className="rounded-md flex h-32 w-full mx-auto hover:shadow-lg hover:text-black ">
+            <div className="my-auto px-1 md:px-2 lg:px-12    font-thin">
               <p>{i.date}</p>
               <p>{i.time}</p>
             </div>
 
-            <div className="relative bg-secondary grid grid-cols-1 place-items-center content-center px-8 ">
+            <div className="relative bg-secondary grid grid-cols-1 place-items-center content-center px-2 md:px-4 lg:px-8 ">
               <h5 className="small-title">{i.title}</h5>
               <p
                 className="cursor-pointer hover:text-secondary"
@@ -56,7 +57,7 @@ const Card = () => {
 
             {/* image */}
             <figure className="rounded">
-              <img className="h-3/4 w-48 rounded-md" src={i.img} alt={i.alt} />
+              <img className="h-3/4 w-full rounded-md" src={i.img} alt={i.alt} />
               <figcaption className=" h-1/4 bg-black text-white p-1">
                 {i.place}
               </figcaption>
@@ -125,7 +126,7 @@ const Card = () => {
                     {/*footer*/}
                   </div>
 
-                  <button className="px-8 py-2 mt-5">Tilmeld</button>
+                  <NavLink path to="/signUp"><button className="px-8 py-2 mt-5">Tilmeld</button></NavLink>
 
                 </div>
               </div>

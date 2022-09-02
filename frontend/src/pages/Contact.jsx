@@ -3,10 +3,9 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Line from "../components/Line";
 import { NavLink } from 'react-router-dom';
-import MAP from '../images/maps-google.png';
+import Map from '../images/maps-google.png';
 import emailjs from '@emailjs/browser';
 import { lavKort } from '../helpers/leaflet';
-
 
 const Contact = () => {
 
@@ -80,9 +79,38 @@ const Contact = () => {
       {/* LEFT-SIDE */}
         <div className='p-5'>
 
+
       <div className='p-2'>
         <p className='flex justify-start text-black pb-8'>+45 42789605</p>
         <p className='flex justify-start text-black pb-8'>contact@scubafun.dk</p>
+
+    <div className='p-2'>
+      <p className='flex justify-start text-black pb-8'>+45 42789605</p>
+      <p className='flex justify-start text-black pb-8'>contact@scubafun.dk</p>
+</div>
+    {/* FORM */}
+    <div className='bg-secondary'>
+      <form className='flex flex-col p-2'>
+        <label className='flex text-black flex-col'>
+          Fulde navn:
+          <input className='p-1 bg-white' type="text" name="name" />
+        </label>
+        
+        <label className='flex text-black flex-col'>
+          Email:
+          <input className='p-1 bg-white' type="text" name="email" />
+        </label>
+
+        <label className='flex text-black flex-col'>
+          Besked:
+          <input className='h-12 md:h-16 lg:h-24 pl-1 bg-white' type="text" name="besked" />
+        </label>
+      </form>
+    </div>
+
+      <div className='flex justify-center pt-3'>
+        <button className='mr-4 h-8 transition duration-500'>Send</button>
+
       </div>
       {/* FORM */}
       <div className='bg-secondary rounded'>
@@ -138,7 +166,9 @@ const Contact = () => {
     </div>
 
     </div>
+    </div>
   )
 }
+
 
 export default Contact;
